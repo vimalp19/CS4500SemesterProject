@@ -1,9 +1,15 @@
 @charset "UTF-8";
 h1, h3, p {
+    color: rgb(221, 222, 217);
     text-align: center;
 }
 
+body {
+    background-color: rgb(44, 54, 77);
+}
+
 #main {
+    height: 100%;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -11,10 +17,14 @@ h1, h3, p {
     margin-bottom: 60px;
 }
 
+nav {
+    color: rgb(53, 55, 56);
+}
+
 footer {
     margin-top: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #535050;
-    color: #FAF7F7;
+    background-color: rgb(53, 55, 56);
+    color: rgb(221, 222, 217);
 }
