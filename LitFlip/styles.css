@@ -21,6 +21,11 @@ nav {
     color: rgb(53, 55, 56);
 }
 
+form {
+    background-color: rgb(53, 55, 56);
+    color: rgb(221, 222, 217);
+}
+
 footer {
     margin-top: 60px;
     padding-top: 20px;
