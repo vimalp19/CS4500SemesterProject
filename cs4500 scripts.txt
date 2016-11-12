@@ -1,0 +1,73 @@
+String resource = "org/mybatis/example/mybatis-config.xml";
+InputStream inputStream = Resources.getResourceAsStream(resource);
+SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+SqlSession session = sqlSessionFactory.openSession();
+try {
+  // do work
+} finally {
+  session.close();
+}
+
+private String checkforstudent(final String username) {
+  return new SQL() {{
+    SELECT("P.STDNT_ID, P.ADULT_ID, P.STDNT_PSWD, P.SDNT_PMN");
+    FROM("STUDENT_TBL P");
+    WHERE("P.STDNT_ID like %s", username);
+  }}.toString();
+}
+
+private String checkforteacher(final String username) {
+  return new SQL() {{
+    SELECT("P.ADLT_ID, P.GROUP_ID, P.ADLT_PSWD, P.SDNT_PMN");
+    FROM("ADULT_TBL P");
+    WHERE("P.ADLT_ID like %s", username);
+  }}.toString();
+}
+
+public String insertstudent(final String stdntid, final String adultid, final String stdntpwd, final String sdntpmn) {
+  return new SQL() {{
+    INSERT_INTO("STUDENT_TBL");
+    VALUES("STDNT_ID, ADULT_ID, STDNT_PSWD, SDNT_PMN", "#{stdntid}, #{adultid}, #{stdntpwd}, #{sdntpmn}");
+  }}.toString();
+}
+
+public String insertteacher(final String adltid, final String groupid, final String adltpswd, final String adltpmn) {
+  return new SQL() {{
+    INSERT_INTO("ADULT_TBL");
+    VALUES("ADLT_ID, GROUP_ID, ADLT_PSWD, ADLT_PMN", "#{adltid}, #{groupid}, #{adltpswd}, #{adltpmn}");
+  }}.toString();
+}
+
+public String getbooksforpage(final String username) {
+  return new SQL() {{
+    SELECT("BK_TITLE, CHPTRS, PAGES, BOOK_ID, UPLOADER_ID, GROUP_ID BK_FMT, GRADE_LVL, LANG, VOCAB_ID, STND_ID");
+    FROM("BOOK_TBL");
+    if (id != null) {
+      WHERE("GROUP_ID like #{username}");
+    }
+  }}.toString();
+}
+
+public String searchforbook(final String bookName, final String genre) {
+  return new SQL() {{
+    SELECT("BK_TITLE");
+    FROM("BOOK_TBL");
+    if (bookName != null) {
+      WHERE("BK_TITLE like #{bookName}");
+    }
+    if (genre != null) {
+      WHERE("GENRE like #{genre}");
+    }
+	if (stdnid != null) {
+      WHERE("STND_ID like #{stndid}");
+    }
+  }}.toString();
+}
+
+public String insertbook(final String bookName, final String chapters, final String pages, final String bookid, final String uploaderid, final String group_id, final String bkformat, final String gradelvl, final String lang, final String vocabid, final String stndid, final String genre) {
+  return new SQL() {{
+    INSERT_INTO("BOOK_TBL");
+    VALUES("BK_TITLE, CHPTRS, PAGES, BOOK_ID, UPLOADER_ID, GROUP_ID, BK_FMT, GRADE_LVL, LANG, VOCAB_ID, STND_ID, GENRE", "#{bookName}, #{chapters}, #{pages}, #{bookid}, #{uploaderid}, #{group_id}, #{bkformat}, #{gradelvl}, #{lang}, #{vocabid}, #{stndid}, #{genre}");
+  }}.toString();
+}
