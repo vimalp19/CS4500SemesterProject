@@ -1,0 +1,28 @@
+//TO-DO list:
+
+This doc is designed to give future devs guidance in accordance with our original goals,
+ideas that we didn't have time to complete.
+
+1) BOOKS TAB (studentHome.html) -
+
+    Using current "Thumbnail" template:
+
+        <div class="col-md-4 col-sm-4">
+            <div class="thumbnail"><img src="images/Thumbnail_Placeholder.png" alt="Thumbnail Image 1">
+                <div class="caption">
+                    <h3>Book Name</h3>
+                    <p>Possibly the Author's Name</p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    USE:    Angular.js should work best, otherwise unknown.
+    GUIDE:  For each book in the server/storage, add "1 thumbnail template".
+            Updated with book.title, book[0] as thumb image (treating the book like an array of html files)
+
+
+2) 
