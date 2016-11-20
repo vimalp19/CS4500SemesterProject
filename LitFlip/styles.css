@@ -36,10 +36,10 @@ footer {
 
 .reader {
     height: 500px;
+    text-align: center;
 }
 
 .readerRow {
     margin: auto;
-    text-align: center;
     vertical-align: middle;
 }
