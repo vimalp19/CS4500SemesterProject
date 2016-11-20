@@ -37,6 +37,7 @@ footer {
 .reader {
     height: 500px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .readerRow {
