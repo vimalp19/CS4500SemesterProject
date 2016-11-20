@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlypPage - Create Student Account</title>
+    <title>Signup</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">FlypPage</a>
+          <a class="navbar-brand" href="index.html">LitFlip</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,61 +48,43 @@
         <fieldset>
 
             <!-- Form Name -->
-            <legend>New Student - Create Account</legend>
+            <legend>New User Signup</legend>
 
             <!-- Text input-->
-            <div class="form-group col-xs-4">
-                <label class="col-md-2 control-label" for="fname">First Name</label>
-                <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md-2" required="">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="fname">First Name</label>
+                <div class="col-md-5">
+                    <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" required="">
+                </div>
             </div>
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-2 control-label" for="lname">Last Name</label>
-                <div class="col-md-2">
+                <label class="col-md-4 control-label" for="lname">Last Name</label>
+                <div class="col-md-5">
                     <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" required="">
                 </div>
             </div>
-            
+
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-2 control-label" for="username">User Name</label>
-                <div class="col-md-2">
-                    <input id="lname" name="lname" type="text" placeholder="User Name" class="form-control input-md" required="">
+                <label class="col-md-4 control-label" for="email">Email</label>
+                <div class="col-md-5">
+                    <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
                 </div>
             </div>
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-2 control-label" for="school">School Name</label>
-                <br>
-                <div class="col-md-2">
-                    <input id="email" name="email" type="text" placeholder="School Name" class="form-control input-md" required="">
-                </div>
-            </div>
-            
-            <!--
-            <div class="form-group">
-                <label for="grade">Grade:</label>
-                    <select class="form-control input-md" id="grade" required="">
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                    </select>
-            </div>
-            -->                
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-2 control-label" for="passwd">Password</label>
-                <div class="col-md-2">
+                <label class="col-md-4 control-label" for="passwd">Password</label>
+                <div class="col-md-5">
                     <input id="passwd" name="passwd" type="text" placeholder="Password" class="form-control input-md" required="">
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label" for="submit"></label>
-                <div class="col-md-2">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-4">
                     <label class="checkbox-inline" for="submit">
                         <input class="btn btn-success" type="submit" name="submit" id="submit" value="Create New Account">
                     </label>
@@ -111,7 +93,7 @@
 
         </fieldset>
     </form>
-    <footer>Copyright &copy; FlypPage 2016</footer>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
