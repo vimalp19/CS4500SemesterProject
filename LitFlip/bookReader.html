@@ -82,12 +82,12 @@
         </nav>
         <div>
             <div class="container-fluid">
-                <div id="reader-wrap">
-                    <div id="prev" onclick="book.prevPage();" class="glyphicon glyphicon-menu-left"></div>
-                    <div id="reader">
-                        <div id="area"></div>
-                    </div>
-                    <div id="next" onclick="book.nextPage();" class="glyphicon glyphicon-menu-right"></div>
+                <div id="reader-wrap row">
+                    <div id="prev" onclick="book.prevPage();" class="glyphicon glyphicon-menu-left col-xs-1 col-sm-2 col-lg-2"></div>
+
+                    <div id="area" class = "col-xs-10 col-sm-8 col-lg-8"></div>
+
+                    <div id="next" onclick="book.nextPage();" class="glyphicon glyphicon-menu-right col-xs-1 col-sm-2 col-lg-2"></div>
                 </div>
                 <script>
                     Book.renderTo("area");
