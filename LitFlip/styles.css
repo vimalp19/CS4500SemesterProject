@@ -23,7 +23,7 @@ nav {
 
 form {
     background-color: rgb(144, 146, 150);
-    color: rgb(221, 222, 217);
+    color: rgb(255, 255, 255);
 }
 
 footer {
@@ -31,5 +31,5 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: rgb(144, 146, 150);
-    color: rgb(221, 222, 217);
+    color: rgb(255, 255, 255);
 }
