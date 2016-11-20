@@ -22,7 +22,7 @@ nav {
 }
 
 form {
-    background-color: rgb(53, 55, 56);
+    background-color: rgb(144, 146, 150);
     color: rgb(221, 222, 217);
 }
 
@@ -30,6 +30,6 @@ footer {
     margin-top: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(53, 55, 56);
+    background-color: rgb(144, 146, 150);
     color: rgb(221, 222, 217);
 }
