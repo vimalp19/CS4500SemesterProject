@@ -33,3 +33,9 @@ footer {
     background-color: rgb(144, 146, 150);
     color: rgb(255, 255, 255);
 }
+
+.reader {
+ 
+    margin: auto;
+    vertical-align: middle;
+}
