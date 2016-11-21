@@ -18,7 +18,7 @@ body {
 }
 
 nav {
-    color: rgb(144, 146, 150);
+    color: rgb(255, 255, 255);
 }
 
 form {
@@ -42,5 +42,5 @@ footer {
 
 .mainbar {
     background-color: rgb(144, 146, 150);
-    color: rgb(255, 255, 255);
+    border-color: rgb(144, 146, 150);
 }
