@@ -64,6 +64,8 @@ footer {
     color: rgb(2, 110, 132);
 }
 
-.col-xs-4 {
-    text-align: center;
+.form-horizontal {
+    display:block;
+    width:75%;
+    margin:0 auto;
 }
