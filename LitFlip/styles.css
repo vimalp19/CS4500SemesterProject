@@ -54,3 +54,8 @@ footer {
 .navbar-inverse .navbar-header > a {
     color: rgb(255, 255, 255);
 }    
+
+.form-group > label {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
