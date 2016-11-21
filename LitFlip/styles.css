@@ -45,7 +45,6 @@ footer {
     border-color: rgb(144, 146, 150);
 }
 
-.mainbartext:hover,
-.mainbartext:focus {
+.mainbartext {
     color: rgb(255, 255, 255);
 }
