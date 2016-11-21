@@ -45,6 +45,10 @@ footer {
     border-color: rgb(144, 146, 150);
 }
 
-.mainbartext {
-    color: rgb(255, 255, 255);
+#Nav a{
+     color: rgb(255, 255, 255);
+}
+
+#Nav a:hover {
+    color: blue;
 }
