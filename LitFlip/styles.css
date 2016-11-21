@@ -60,7 +60,7 @@ footer {
 }
 
 .form-group,
-.form-group > div {
+.form-group .col-xs-4 {
     text-align: center;
     color: rgb(2, 110, 132);
 }
