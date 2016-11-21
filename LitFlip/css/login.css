@@ -2,6 +2,14 @@ body {
     background-color: #ffffff;
 }
 
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(144, 146, 150);
+    color: rgb(255, 255, 255);
+}
+
 .panel-heading {
     padding: 5px 15px;
 }
