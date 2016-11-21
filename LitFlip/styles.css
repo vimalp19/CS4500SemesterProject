@@ -59,8 +59,11 @@ footer {
     color: rgb(2, 110, 132);
 }
 
-.form-group,
-.form-group .col-xs-4 {
+.form-group {
     text-align: center;
     color: rgb(2, 110, 132);
+}
+
+.col-xs-4 {
+    text-align: center;
 }
