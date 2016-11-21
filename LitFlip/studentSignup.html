@@ -51,7 +51,7 @@
             <!-- Form Name -->
             <legend class="form-title">New Student Account</legend>
 
-            <!-- Text input-->
+            <!-- First Name -->
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="fname">First Name:</label>
@@ -60,36 +60,97 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+
+             <!-- Last Name -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="lname">Last Name</label>
-                <div class="col-md-5">
-                    <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" required="">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="lname">Last Name:</label>
+                    <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control" required="">
+                    <span>Please enter in your last name</span>
                 </div>
             </div>
 
-            <!-- Text input-->
+             <!-- Age -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="email">Email</label>
-                <div class="col-md-5">
-                    <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="age">Age:</label>
+                    <select class="form-control" id="age">
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                    </select>
+                    <span>How old are you?</span>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- School Name -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="passwd">Password</label>
-                <div class="col-md-5">
-                    <input id="passwd" name="passwd" type="text" placeholder="Password" class="form-control input-md" required="">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="school">School Name:</label>
+                    <input id="school" name="school" type="text" placeholder="School Name" class="form-control" required="">
+                    <span>Please enter in the name of your school</span>
                 </div>
             </div>
 
+            <!-- Grade -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"></label>
-                <div class="col-md-4">
-                    <label class="checkbox-inline" for="submit">
-                        <input class="btn btn-success" type="submit" name="submit" id="submit" value="Create New Account">
-                    </label>
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="grade">Age:</label>
+                    <select class="form-control" id="grade">
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+                    <span>What grade are you in currently or will be entering at the beginning of the new school year?</span>
+                </div>
+            </div>
+            
+            <!-- Reading Level -->
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="readinglevel">School Name:</label>
+                    <input id="readinglevel" name="readinglevel" type="text" placeholder="Reading Level" class="form-control" required="">
+                    <span>Don't know your reading level? Find out now by clicking here</span>
+                </div>
+            </div>
+            
+            <!-- Reading Frequency -->
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="readingfrequency">How often do you read?</label>
+                    <select class="form-control" id="readingfrequency">
+                        <option>Daily</option>
+                        <option>A few times per week</option>
+                        <option>A few times per month</option>
+                    </select>
+                    <span>Please select the option that best fits how often you read</span>
+                </div>
+            </div>
+            
+            <!-- Reading Purpose -->
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="readingpurpose">Why do you read?</label>
+                    <select class="form-control" id="readingpurpose">
+                        <option>I enjoy it</option>
+                        <option>My teacher or parents make me read</option>
+                    </select>
+                    <span>Please select the option that best fits why you do reading</span>
+                </div>
+            </div>
+            
+            <!-- Reading Enjoyment -->
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="readingenjoy">How much do you enjoy reading?</label>
+                    <select class="form-control" id="readingenjoy">
+                        <option>A lot</option>
+                        <option>A little</option> 
+                        <option>Not at all</option>
+                    </select>
+                    <span>Please select the option that describes how much you enjoy reading</span>
                 </div>
             </div>
 
