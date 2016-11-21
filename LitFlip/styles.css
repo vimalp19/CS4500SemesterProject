@@ -55,7 +55,7 @@ footer {
     color: rgb(255, 255, 255);
 }    
 
-.form-group > label {
+.form-title {
     text-align: center;
     color: rgb(255, 255, 255);
 }
