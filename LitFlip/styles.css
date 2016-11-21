@@ -59,7 +59,8 @@ footer {
     color: rgb(2, 110, 132);
 }
 
-.form-group {
+.form-group,
+.form-group > div {
     text-align: center;
     color: rgb(2, 110, 132);
 }
