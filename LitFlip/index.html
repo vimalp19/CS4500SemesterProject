@@ -41,7 +41,7 @@
                             <input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked>
                         </div>
                         <div class="panel-body">
-                            <form role="form" action="Javascript:checkforstudent()" method="POST">
+                            <form role="form" onSubmit="Javascript:checkforstudent(loginname)" method="POST">
                                 <fieldset>
                                     <div class="row">
                                         <div class="center-block">
@@ -90,11 +90,6 @@
         <footer>Copyright &copy; FlypPage 2016</footer>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script type="text/javascript>
-                      function checkforstudent(){
-                        window.print(hey);
-                      }
-                                          </script>
     </body>
 </html>
 
