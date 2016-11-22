@@ -9,26 +9,26 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         
         <!-- EPUBJS Renderer -->
-        <script src="./build/epub.min.js"></script>
+        <script src="build/epub.min.js"></script>
 
         <!-- Zip JS -->
-        <script src="./build/zip.min.js"></script>
+        <script src="build/zip.min.js"></script>
         
-        <style type="text/css">
+        <!-- <style type="text/css">
             body {
                 overflow: auto;
                 background: #eee;
             }
-        </style>
+        </style> -->
         
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         
         <script>
             "use strict";
             var Book = ePub("./reader/moby-dick.epub", {
               width: 400,
-              height: 650,
+              height: 500,
               spreads : false
             });
         </script>
@@ -64,17 +64,18 @@
             <!-- /.container-fluid -->
         </nav>
         <div class="container-fluid">
-            <div id="reader-wrap" class="row">
-                <div id="prev" onclick="book.prevPage();" class="reader col-xs-1 col-sm-2 col-lg-2">Previous Page</div>
+            <div class="row">
+                <div id="prev" onclick="book.prevPage();" class="reader col-xs-1 col-sm-2 col-lg-2">Back</div>
 
                 <div id="area" class = "reader col-xs-10 col-sm-8 col-lg-8"></div>
 
-                <div id="next" onclick="book.nextPage();" class="reader col-xs-1 col-sm-2 col-lg-2">Next Page</div>
+                <div id="next" onclick="book.nextPage();" class="reader col-xs-1 col-sm-2 col-lg-2">Next</div>
             </div>
         </div>
         <script>
             Book.renderTo("area");
         </script>
+
         <footer>Copyright &copy; FlypPage 2016</footer>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
