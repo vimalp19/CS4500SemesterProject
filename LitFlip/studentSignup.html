@@ -74,7 +74,7 @@
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="age">Age:</label>
-                    <select class="form-control" id="age">
+                    <select required class="form-control" id="age">
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
@@ -98,12 +98,21 @@
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="grade">Grade:</label>
-                    <select class="form-control" id="grade">
+                    <select required class="form-control" id="grade">
                         <option>6</option>
                         <option>7</option>
                         <option>8</option>
                     </select>
                     <span>What grade are you in currently or will be entering at the beginning of the new school year?</span>
+                </div>
+            </div>
+            
+            <!-- Teacher Passcode -->
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4" align="center">
+                    <label for="accesscode">Class Access Code:</label>
+                    <input id="accesscode" name="accesscode" type="text" placeholder="Class Access Code" class="form-control">
+                    <span>If you are signing up for a class at school, please enter the access code given by your teacher</span>
                 </div>
             </div>
             
@@ -120,7 +129,7 @@
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="readingfrequency">How often do you read?</label>
-                    <select class="form-control" id="readingfrequency">
+                    <select required class="form-control" id="readingfrequency">
                         <option>Daily</option>
                         <option>A few times per week</option>
                         <option>A few times per month</option>
@@ -133,7 +142,7 @@
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="readingpurpose">Why do you read?</label>
-                    <select class="form-control" id="readingpurpose">
+                    <select required class="form-control" id="readingpurpose">
                         <option>I enjoy it</option>
                         <option>My teacher or parents make me read</option>
                     </select>
@@ -145,7 +154,7 @@
             <div class="form-group">
                 <div class="col-xs-4 col-xs-offset-4" align="center">
                     <label for="readingenjoy">How much do you enjoy reading?</label>
-                    <select class="form-control" id="readingenjoy">
+                    <select required class="form-control" id="readingenjoy">
                         <option>A lot</option>
                         <option>A little</option> 
                         <option>Not at all</option>
