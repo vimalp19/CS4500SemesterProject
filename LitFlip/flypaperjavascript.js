@@ -20,7 +20,8 @@ function checkforstudent(username) {
     }
 }
 
-function checkforteacher(username) {
+function checkforteacher() {
+    var username = document.getElementById("name").value;
     if (username == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
