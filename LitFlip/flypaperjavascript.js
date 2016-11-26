@@ -1,3 +1,14 @@
+function boxnum(username) {
+    if(document.getElementbyId('switch').checked)
+    {
+		checkforstudent(username);
+    }
+	else
+    {
+		checkforstudent(username);
+	}
+}	
+
 function checkforstudent(username) {
     if (username == "") {
         document.getElementById("txtHint").innerHTML = "";
