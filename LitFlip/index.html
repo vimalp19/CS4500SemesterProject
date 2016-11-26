@@ -11,14 +11,6 @@
     
     <script src="flypaperjavascript.js"></script>
     
-    <!-- <script>
-       $(document).ready(function() {
-           $('#login').click(function() {
-               foo($('#loginname').val());
-           });
-       });
-    </script> -->
-    
     <body>
         <div class="container-fluid" style="margin-top:40px">
             <nav class="navbar navbar-inverse navbar-custom" role="navigation">
@@ -51,7 +43,7 @@
                             <input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked>
                         </div>
                         <div class="panel-body">
-                            <form role="form" name="login" id="login" action=" " method="POST">
+                            <form role="form" name="login" id="login" action="boxnum(document.getElementById('loginname').value), document.getElementById('password').value" method="POST">
                                 <fieldset>
                                     <div class="row">
                                         <div class="center-block">
