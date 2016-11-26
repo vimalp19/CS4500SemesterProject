@@ -11,6 +11,14 @@
     
     <script src="flypaperjavascript.js"></script>
     
+    <script>
+       $(document).ready(function() {
+           $('#login').click(function() {
+               foo($('#loginname').val());
+           });
+       });
+    </script>
+    
     <body>
         <div class="container-fluid" style="margin-top:40px">
             <nav class="navbar navbar-inverse navbar-custom" role="navigation">
@@ -43,7 +51,7 @@
                             <input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked>
                         </div>
                         <div class="panel-body">
-                            <form role="form" name="login" id="login" onsubmit=" " action=" " method="POST">
+                            <form role="form" name="login" id="login" action=" " method="POST">
                                 <fieldset>
                                     <div class="row">
                                         <div class="center-block">
@@ -58,7 +66,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="glyphicon glyphicon-user"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Username" name="loginname" type="text" autofocus>
+                                                    <input class="form-control" placeholder="Username" id="loginname" name="loginname" type="text" autofocus>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -66,7 +74,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="glyphicon glyphicon-lock"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                                    <input class="form-control" placeholder="Password" id="password" name="password" type="password" value="">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -92,6 +100,7 @@
         <footer>Copyright &copy; FlypPage 2016</footer>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        
     </body>
 </html>
 
