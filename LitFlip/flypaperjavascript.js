@@ -1,19 +1,17 @@
-function boxnum(username) {
+function boxnum(username, password) {
     if(document.getElementbyId('switch').checked)
     {
 	 $(‘#login’).attr(‘action’, “studentHome.html”);
-	 checkforstudent(username);
+	 checkforstudent(username, password);
     }
     else
     {
 	$(‘#login’).attr(‘action’, “teacherHome.html”);
-	checkforstudent(username);
+	checkforstudent(username, password);
     }
 }	
 
-function checkforstudent() {
-    var username = document.getElementById("name").value;
-    var password = document.getElementById("name").value;
+function checkforstudent(username, password) {
 	if (username == "" || password == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -35,10 +33,8 @@ function checkforstudent() {
     }
 }
 
-function checkforteacher() {
-    var username = document.getElementById("name").value;
-    var password = document.getElementById("name").value;
-    if (username == "") {
+function checkforteacher(username, password) {
+    if (username == "" || password == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
