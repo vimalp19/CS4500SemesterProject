@@ -11,8 +11,10 @@ function boxnum(username) {
     }
 }	
 
-function checkforstudent(username) {
-    if (username == "") {
+function checkforstudent() {
+    var username = document.getElementById("name").value;
+    var password = document.getElementById("name").value;
+	if (username == "" || password == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -28,13 +30,14 @@ function checkforstudent(username) {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username,true);
+        xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
         xmlhttp.send();
     }
 }
 
 function checkforteacher() {
     var username = document.getElementById("name").value;
+    var password = document.getElementById("name").value;
     if (username == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -51,7 +54,7 @@ function checkforteacher() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username,true);
+        xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
         xmlhttp.send();
     }
 }
