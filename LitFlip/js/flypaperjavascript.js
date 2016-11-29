@@ -12,8 +12,8 @@ function boxnum() {
 }	
 
 function checkforstudent() {
-	var username = document.forms["login"]["loginname"].innerHTML;
-	var password = document.forms["login"]["password"].innerHTML;
+	var username = document.getElementById("loginname").innerHTML;
+	var password = document.getElementById("password").innerHTML;
 	if (username.value == "" || password.value == "") {
         document.getElementById("loginname").innerHTML = "";
         return;
@@ -36,8 +36,8 @@ function checkforstudent() {
 }
 
 function checkforteacher() {
-    var username = document.forms["login"]["loginname"].innerHTML;
-    var password = document.forms["login"]["password"].innerHTML;
+    var username = document.getElementById("loginname").innerHTML;
+    var password = document.getElementById("password").innerHTML;
     if (username.value == "" || password.value == "") {
       document.getElementById("loginname").innerHTML = "";
       return;
