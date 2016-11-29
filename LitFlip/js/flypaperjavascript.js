@@ -12,8 +12,8 @@ function boxnum(rd) {
 }	
 
 function checkforstudent() {
-	username = document.getElementById("loginname").innerHTML;
-	password = document.getElementById("password").innerHTML;
+	var username = document.getElementById("loginname").innerHTML;
+	var password = document.getElementById("password").innerHTML;
 	if (username == "" || password == "") {
         document.getElementById("loginname").innerHTML = "";
         return;
@@ -36,8 +36,8 @@ function checkforstudent() {
 }
 
 function checkforteacher() {
-    username = document.getElementById("loginname").innerHTML;
-    password = document.getElementById("password").innerHTML;
+    var username = document.getElementById("loginname").innerHTML;
+    var password = document.getElementById("password").innerHTML;
     if (username == "" || password == "") {
       document.getElementById("loginname").innerHTML = "";
       return;
@@ -59,8 +59,20 @@ function checkforteacher() {
     }
 }
 
-function insertstudent(stdntid, adultid, sdntpmn, fname, lname, age, school, grade, readlvl, readfreq, readpurp, readenj) {
-    if (stdntid == "" || adultid == "" || sdntpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || readlvl == "" || readfreq == "" || readpurp == "" || readenj == "") {
+function insertstudent() {
+    var stdntid = document.getElementById("stdntid").innerHTML;
+    var adultid = document.getElementById("adultid").innerHTML;
+    var sdntpmn = document.getElementById("sdntpmn").innerHTML;
+    var fname = document.getElementById("fname").innerHTML;
+    var lname = document.getElementById("lname").innerHTML;
+    var age = document.getElementById("age").innerHTML;
+    var school = document.getElementById("school").innerHTML;
+    var grade = document.getElementById("grade").innerHTML; 
+    var readlvl = document.getElementById("readlvl").innerHTML;
+    var readfreq = document.getElementById("readfreq").innerHTML;
+    var readpurp = document.getElementById("readpurp").innerHTML;
+    var readenj = document.getElementById("readenj").innerHTML; 
+	if (stdntid == "" || adultid == "" || sdntpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || readlvl == "" || readfreq == "" || readpurp == "" || readenj == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -81,8 +93,20 @@ function insertstudent(stdntid, adultid, sdntpmn, fname, lname, age, school, gra
     }
 }
 
-function insertteacher(adltid, username, groupid, adltpswd, adltpmn, fname, lname, age, school, grade, email, username) {
-    if (adltid == "" || groupid == "" || adltpswd == "" || adltpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || email == "" || username "") {
+function insertteacher() {
+    var adltid = document.getElementById("adltid").innerHTML;
+    var username = document.getElementById("username").innerHTML;
+    var groupid = document.getElementById("groupid").innerHTML;
+    var adltpswd = document.getElementById("adltpswd").innerHTML;
+    var adltpmn = document.getElementById("adltpmn").innerHTML;
+    var fname = document.getElementById("fname").innerHTML;
+    var lname = document.getElementById("lname").innerHTML;
+    var age = document.getElementById("age").innerHTML;
+    var school = document.getElementById("school").innerHTML;
+    var grade = document.getElementById("grade").innerHTML;
+    var email = document.getElementById("email").innerHTML;
+
+	if (adltid == "" || groupid == "" || adltpswd == "" || adltpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || email == "" || username "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -103,7 +127,8 @@ function insertteacher(adltid, username, groupid, adltpswd, adltpmn, fname, lnam
     }
 }
 
-function getbooksforpage(username) {
+function getbooksforpage() {
+    var username = document.getElementById("username").innerHTML;
     if (username == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -125,7 +150,9 @@ function getbooksforpage(username) {
     }
 }
 
-function searchforbook(bookName, stndid) {
+function searchforbook() {
+    var bookName = document.getElementById("bookName").innerHTML;
+    var stndid = document.getElementById("stndid").innerHTML;
     if (bookName == "" || stndid == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -147,7 +174,18 @@ function searchforbook(bookName, stndid) {
     }
 }
 
-function insertbook(bookName, chapters, pages, bookid, uploaderid, group_id, bkformat, gradelvl, lang, vocabid, stndid) {
+function insertbook() {
+    var bookName = document.getElementById("bookName").innerHTML;
+    var chapters = document.getElementById("chapters").innerHTML;
+    var pages = document.getElementById("pages").innerHTML;
+    var bookid = document.getElementById("bookid").innerHTML;
+    var uploaderid = document.getElementById("uploaderid").innerHTML;
+    var group_id = document.getElementById("group_id").innerHTML;
+    var bkformat = document.getElementById("bkformat").innerHTML;
+    var gradelvl = document.getElementById("gradelvl").innerHTML;
+    var lang = document.getElementById("lang").innerHTML;
+    var vocabid = document.getElementById("vocabid").innerHTML;
+    var stndid = document.getElementById("stndid").innerHTML;
     if (bookName == "" || chapters == "" || pages == "" || bookid == "" || uploaderid == "" || group_id == "" || bkformat == "" || gradelvl == "" || lang == "" || vocabid == "" || stndid == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -169,7 +207,9 @@ function insertbook(bookName, chapters, pages, bookid, uploaderid, group_id, bkf
     }
 }
 
-function insertvocab(VOCAB_ID, VOCAB_TERM) {
+function insertvocab() {
+    var VOCAB_ID = document.getElementById("VOCAB_ID").innerHTML;
+    var VOCAB_TERM = document.getElementById("VOCAB_TERM").innerHTML;
     if (VOCAB_ID == "" || VOCAB_TERM == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -195,7 +235,9 @@ function insertvocab(VOCAB_ID, VOCAB_TERM) {
     }
 }
 
-function getvocab(VOCAB_ID, VOCAB_TERM) {
+function getvocab() {
+    var VOCAB_ID;
+    var VOCAB_TERM;
     if (VOCAB_ID == "" || VOCAB_TERM == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -217,7 +259,14 @@ function getvocab(VOCAB_ID, VOCAB_TERM) {
     }
 }
 
-function insertnotes(GROUP_ID, NOTE_ID, NOTE_TXT, NOTE_TYPE, PAGE_NUM, BOOK_ID, LANG) {
+function insertnotes() {
+    var GROUP_ID = document.getElementById("GROUP_ID").innerHTML;
+    var NOTE_ID = document.getElementById("NOTE_ID").innerHTML;
+    var NOTE_TXT = document.getElementById("NOTE_TXT").innerHTML;
+    var NOTE_TYPE = document.getElementById("NOTE_TYPE").innerHTML;
+    var PAGE_NUM = document.getElementById("PAGE_NUM").innerHTML;
+    var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
+    var LANG = document.getElementById("LANG").innerHTML;
     if (GROUP_ID == "" || NOTE_ID == "" || NOTE_TXT == "" || NOTE_TYPE == "" || PAGE_NUM == "" || BOOK_ID == "" || LANG == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -239,7 +288,14 @@ function insertnotes(GROUP_ID, NOTE_ID, NOTE_TXT, NOTE_TYPE, PAGE_NUM, BOOK_ID, 
     }
 }
 
-function insertquiz(GROUP_ID, QUIZ_ID, QUIZ_TXT, QUIZ_TYPE, BOOK_ID, QUIZ_FMT, STND_ID) {
+function insertquiz() {
+    var GROUP_ID = document.getElementById("GROUP_ID").innerHTML;
+    var QUIZ_ID = document.getElementById("QUIZ_ID").innerHTML;
+    var QUIZ_TXT = document.getElementById("QUIZ_TXT").innerHTML;
+    var QUIZ_TYPE = document.getElementById("QUIZ_TYPE").innerHTML;   
+    var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
+    var QUIZ_FMT = document.getElementById("QUIZ_FMT").innerHTML;
+    var STND_ID = document.getElementById("STND_ID").innerHTML;
     if (GROUP_ID == "" || QUIZ_ID == "" || QUIZ_TXT == "" || QUIZ_TYPE == "" || BOOK_ID == "" || QUIZ_FMT == "" || STND_ID == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
