@@ -92,8 +92,65 @@
         <footer>Copyright &copy; FlypPage 2016</footer>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/flypaperjavascript.js"></script>
         
+ <script>
+     function boxnum(username, password) {
+    if(document.getElementbyId('switch').checked)
+    {
+	 $(‘#login’).attr(‘action’, “studentHome.html”);
+	 checkforstudent(username, password);
+    }
+    else
+    {
+	$(‘#login’).attr(‘action’, “teacherHome.html”);
+	checkforstudent(username, password);
+    }
+}	
+
+function checkforstudent(username, password) {
+	if (username == "" || password == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
+        xmlhttp.send();
+    }
+}
+
+function checkforteacher(username, password) {
+    if (username == "" || password == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
+        xmlhttp.send();
+    }
+}
+</script>
     </body>
 </html>
 
