@@ -14,7 +14,7 @@ function boxnum(rd) {
 function checkforstudent() {
 	var username = document.getElementById("loginname").innerHTML;
 	var password = document.getElementById("password").innerHTML;
-	if (username == "" || password == "") {
+	if (username.value == "" || password.value == "") {
         document.getElementById("loginname").innerHTML = "";
         return;
     } else { 
@@ -38,7 +38,7 @@ function checkforstudent() {
 function checkforteacher() {
     var username = document.getElementById("loginname").innerHTML;
     var password = document.getElementById("password").innerHTML;
-    if (username == "" || password == "") {
+    if (username.value == "" || password.value == "") {
       document.getElementById("loginname").innerHTML = "";
       return;
     } else { 
@@ -72,7 +72,7 @@ function insertstudent() {
     var readfreq = document.getElementById("readfreq").innerHTML;
     var readpurp = document.getElementById("readpurp").innerHTML;
     var readenj = document.getElementById("readenj").innerHTML; 
-	if (stdntid == "" || adultid == "" || sdntpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || readlvl == "" || readfreq == "" || readpurp == "" || readenj == "") {
+	if (stdntid.value == "" || adultid.value == "" || sdntpmn.value == "" || fname.value == "" || lname.value == "" || age.value == "" || school.value == "" || grade.value == "" || readlvl.value == "" || readfreq.value == "" || readpurp.value == "" || readenj.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -106,7 +106,7 @@ function insertteacher() {
     var grade = document.getElementById("grade").innerHTML;
     var email = document.getElementById("email").innerHTML;
 
-	if (adltid == "" || groupid == "" || adltpswd == "" || adltpmn == "" || fname == "" || lname == "" || age == "" || school == "" || grade == "" || email == "" || username "") {
+	if (adltid.value == "" || groupid.value == "" || adltpswd.value == "" || adltpmn.value == "" || fname.value == "" || lname.value == "" || age.value == "" || school.value == "" || grade.value == "" || email.value == "" || username.value "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -129,7 +129,7 @@ function insertteacher() {
 
 function getbooksforpage() {
     var username = document.getElementById("username").innerHTML;
-    if (username == "") {
+    if (username.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -153,7 +153,7 @@ function getbooksforpage() {
 function searchforbook() {
     var bookName = document.getElementById("bookName").innerHTML;
     var stndid = document.getElementById("stndid").innerHTML;
-    if (bookName == "" || stndid == "") {
+    if (bookName.value == "" || stndid.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -186,7 +186,7 @@ function insertbook() {
     var lang = document.getElementById("lang").innerHTML;
     var vocabid = document.getElementById("vocabid").innerHTML;
     var stndid = document.getElementById("stndid").innerHTML;
-    if (bookName == "" || chapters == "" || pages == "" || bookid == "" || uploaderid == "" || group_id == "" || bkformat == "" || gradelvl == "" || lang == "" || vocabid == "" || stndid == "") {
+    if (bookName.value == "" || chapters.value == "" || pages.value == "" || bookid.value == "" || uploaderid.value == "" || group_id.value == "" || bkformat.value == "" || gradelvl.value == "" || lang.value == "" || vocabid.value == "" || stndid.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -210,7 +210,7 @@ function insertbook() {
 function insertvocab() {
     var VOCAB_ID = document.getElementById("VOCAB_ID").innerHTML;
     var VOCAB_TERM = document.getElementById("VOCAB_TERM").innerHTML;
-    if (VOCAB_ID == "" || VOCAB_TERM == "") {
+    if (VOCAB_ID.value == "" || VOCAB_TERM.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -238,10 +238,7 @@ function insertvocab() {
 function getvocab() {
     var VOCAB_ID;
     var VOCAB_TERM;
-    if (VOCAB_ID == "" || VOCAB_TERM == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else { 
+    
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -267,7 +264,7 @@ function insertnotes() {
     var PAGE_NUM = document.getElementById("PAGE_NUM").innerHTML;
     var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
     var LANG = document.getElementById("LANG").innerHTML;
-    if (GROUP_ID == "" || NOTE_ID == "" || NOTE_TXT == "" || NOTE_TYPE == "" || PAGE_NUM == "" || BOOK_ID == "" || LANG == "") {
+    if (GROUP_ID.value == "" || NOTE_ID.value == "" || NOTE_TXT.value == "" || NOTE_TYPE.value == "" || PAGE_NUM.value == "" || BOOK_ID.value == "" || LANG.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -296,7 +293,7 @@ function insertquiz() {
     var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
     var QUIZ_FMT = document.getElementById("QUIZ_FMT").innerHTML;
     var STND_ID = document.getElementById("STND_ID").innerHTML;
-    if (GROUP_ID == "" || QUIZ_ID == "" || QUIZ_TXT == "" || QUIZ_TYPE == "" || BOOK_ID == "" || QUIZ_FMT == "" || STND_ID == "") {
+    if (GROUP_ID.value == "" || QUIZ_ID.value == "" || QUIZ_TXT.value == "" || QUIZ_TYPE.value == "" || BOOK_ID.value == "" || QUIZ_FMT.value == "" || STND_ID.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
