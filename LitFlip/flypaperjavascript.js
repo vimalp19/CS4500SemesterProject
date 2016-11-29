@@ -28,7 +28,7 @@ function checkforstudent(username, password) {
                 document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
+        //xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
         xmlhttp.send();
     }
 }
@@ -50,7 +50,7 @@ function checkforteacher(username, password) {
                 document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
+        //xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
         xmlhttp.send();
     }
 }
