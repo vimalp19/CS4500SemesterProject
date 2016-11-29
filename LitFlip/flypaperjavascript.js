@@ -29,7 +29,7 @@ function checkforstudent(username, password) {
             }
         };
         //xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
-        xmlhttp.send();
+        //xmlhttp.send();
     }
 }
 
@@ -51,7 +51,7 @@ function checkforteacher(username, password) {
             }
         };
         //xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
-        xmlhttp.send();
+        //xmlhttp.send();
     }
 }
 
