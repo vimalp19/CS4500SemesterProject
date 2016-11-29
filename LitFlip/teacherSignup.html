@@ -44,12 +44,30 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" onSubmit="return insertteacher()">
 
             <!-- Form Name -->
             <legend class="form-title">NEW TEACHER ACCOUNT</legend>
 
-            <!-- First Name -->
+            <!-- Username -->
+            <div class="form-group">
+                <div class="col-xs-6 col-xs-offset-3" align="center">
+                    <label for="username">Username:</label>
+                    <input id="username" name="username" type="text" placeholder="Username" class="form-control" required="">
+                    <span>Please enter in your Username</span>
+                </div>
+            </div>
+	    
+	    <!-- Password -->
+            <div class="form-group">
+                <div class="col-xs-6 col-xs-offset-3" align="center">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="text" placeholder="Password" class="form-control" required="">
+                    <span>Please enter in your Password</span>
+                </div>
+            </div>
+	    
+	    <!-- First Name -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
                     <label for="fname">First Name:</label>
@@ -64,6 +82,15 @@
                     <label for="lname">Last Name:</label>
                     <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control" required="">
                     <span>Please enter in your last name</span>
+                </div>
+            </div>
+	    
+	    <!-- Age -->
+            <div class="form-group">
+                <div class="col-xs-6 col-xs-offset-3" align="center">
+                    <label for="age">Age:</label>
+                    <input id="age" name="age" type="text" placeholder="Age" class="form-control" required="">
+                    <span>Please enter in your age</span>
                 </div>
             </div>
 	    
@@ -115,6 +142,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
+    <script src="js/flypaperjavascript.js"></script>
 </body>
 
 </html>
