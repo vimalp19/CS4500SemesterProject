@@ -1,19 +1,21 @@
-function boxnum(username, password) {
+function boxnum(rd) {
     if(document.getElementbyId('switch').checked)
     {
 	 $(‘#login’).attr(‘action’, “studentHome.html”);
-	 checkforstudent(username, password);
+	 checkforstudent();
     }
     else
     {
 	$(‘#login’).attr(‘action’, “teacherHome.html”);
-	checkforstudent(username, password);
+	checkforstudent();
     }
 }	
 
-function checkforstudent(username, password) {
+function checkforstudent() {
+	username = document.getElementById("loginname").innerHTML;
+	password = document.getElementById("password").innerHTML;
 	if (username == "" || password == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("loginname").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -25,7 +27,7 @@ function checkforstudent(username, password) {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=checkforstudent&q="+username+"&r="password,true);
@@ -33,10 +35,12 @@ function checkforstudent(username, password) {
     }
 }
 
-function checkforteacher(username, password) {
+function checkforteacher() {
+    username = document.getElementById("loginname").innerHTML;
+    password = document.getElementById("password").innerHTML;
     if (username == "" || password == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
+      document.getElementById("loginname").innerHTML = "";
+      return;
     } else { 
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -47,7 +51,7 @@ function checkforteacher(username, password) {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=checkforteacher&q="+username+"&r="password,true);
