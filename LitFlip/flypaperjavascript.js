@@ -13,7 +13,7 @@ function boxnum(username, password) {
 
 function checkforstudent(username, password) {
 	if (username == "" || password == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("loginname").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -25,7 +25,7 @@ function checkforstudent(username, password) {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
@@ -35,7 +35,7 @@ function checkforstudent(username, password) {
 
 function checkforteacher(username, password) {
     if (username == "" || password == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("loginname").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -47,7 +47,7 @@ function checkforteacher(username, password) {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
