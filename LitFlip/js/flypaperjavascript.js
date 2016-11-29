@@ -1,4 +1,4 @@
-function boxnum(rd) {
+function boxnum() {
     if(document.getElementbyId('switch').checked)
     {
 	 $(‘#login’).attr(‘action’, “studentHome.html”);
@@ -130,7 +130,7 @@ function insertteacher() {
 function getbooksforpage() {
     var username = document.getElementById("username").innerHTML;
     if (username.value == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("book_id").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -142,7 +142,7 @@ function getbooksforpage() {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("book_id").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=getbooksforpage&q="+username,true);
