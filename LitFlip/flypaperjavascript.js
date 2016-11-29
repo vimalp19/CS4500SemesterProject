@@ -1,12 +1,12 @@
 function boxnum(username, password) {
     if(document.getElementbyId('switch').checked)
     {
-	 //$(‘#login’).attr(‘action’, “studentHome.html”);
+	 $(‘#login’).attr(‘action’, “studentHome.html”);
 	 checkforstudent(username, password);
     }
     else
     {
-	//$(‘#login’).attr(‘action’, “teacherHome.html”);
+	$(‘#login’).attr(‘action’, “teacherHome.html”);
 	checkforstudent(username, password);
     }
 }	
