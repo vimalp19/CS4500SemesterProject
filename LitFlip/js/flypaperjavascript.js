@@ -130,7 +130,7 @@ function insertteacher() {
 function getbooksforpage() {
     var username = document.getElementById("username").innerHTML;
     if (username.value == "") {
-        document.getElementById("book_id").innerHTML = "";
+        document.getElementById("book_info").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -142,7 +142,7 @@ function getbooksforpage() {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("book_id").innerHTML = this.responseText;
+                document.getElementById("book_info").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=getbooksforpage&q="+username,true);
@@ -154,7 +154,7 @@ function searchforbook() {
     var bookName = document.getElementById("bookName").innerHTML;
     var stndid = document.getElementById("stndid").innerHTML;
     if (bookName.value == "" || stndid.value == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("book_info").innerHTML = "";
         return;
     } else { 
         if (window.XMLHttpRequest) {
@@ -166,7 +166,7 @@ function searchforbook() {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("book_info").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=searchforbook&q=" + bookName + "&r=" + stndid,true);
@@ -248,7 +248,7 @@ function getvocab() {
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("vocab_info").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","flypaper.php?p=getvocab&q=" + vocab_id + "&r=" + vocab_term ,true);
