@@ -1,12 +1,12 @@
 function boxnum(username, password) {
     if(document.getElementbyId('switch').checked)
     {
-	 $(‘#login’).attr(‘action’, “studentHome.html”);
+	 //$(‘#login’).attr(‘action’, “studentHome.html”);
 	 checkforstudent(username, password);
     }
     else
     {
-	$(‘#login’).attr(‘action’, “teacherHome.html”);
+	//$(‘#login’).attr(‘action’, “teacherHome.html”);
 	checkforstudent(username, password);
     }
 }	
@@ -28,8 +28,8 @@ function checkforstudent(username, password) {
                 document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
-        //xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
-        //xmlhttp.send();
+        xmlhttp.open("GET","flypaper.php?p= checkforstudent q="+username " r="password,true);
+        xmlhttp.send();
     }
 }
 
@@ -50,8 +50,8 @@ function checkforteacher(username, password) {
                 document.getElementById("loginname").innerHTML = this.responseText;
             }
         };
-        //xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
-        //xmlhttp.send();
+        xmlhttp.open("GET","flypaper.php?p= checkforteacher q="+username " r="password,true);
+        xmlhttp.send();
     }
 }
 
