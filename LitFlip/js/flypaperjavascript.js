@@ -208,9 +208,9 @@ function insertbook() {
 }
 
 function insertvocab() {
-    var VOCAB_ID = document.getElementById("VOCAB_ID").innerHTML;
-    var VOCAB_TERM = document.getElementById("VOCAB_TERM").innerHTML;
-    if (VOCAB_ID.value == "" || VOCAB_TERM.value == "") {
+    var vocab_id = document.getElementById("vocab_id").innerHTML;
+    var vocab_term = document.getElementById("vocab_term").innerHTML;
+    if (vocab_id.value == "" || vocab_term.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -230,14 +230,14 @@ function insertvocab() {
 				   document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=insertvocab&q=" + VOCAB_ID + "&r=" + VOCAB_TERM ,true);
+        xmlhttp.open("GET","flypaper.php?p=insertvocab&q=" + vocab_id + "&r=" + vocab_term ,true);
         xmlhttp.send();
     }
 }
 
 function getvocab() {
-    var VOCAB_ID;
-    var VOCAB_TERM;
+    var vocab_id;
+    var vocab_term;
     
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -251,20 +251,20 @@ function getvocab() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=getvocab&q=" + VOCAB_ID + "&r=" + VOCAB_TERM ,true);
+        xmlhttp.open("GET","flypaper.php?p=getvocab&q=" + vocab_id + "&r=" + vocab_term ,true);
         xmlhttp.send();
     }
 }
 
 function insertnotes() {
-    var GROUP_ID = document.getElementById("GROUP_ID").innerHTML;
-    var NOTE_ID = document.getElementById("NOTE_ID").innerHTML;
-    var NOTE_TXT = document.getElementById("NOTE_TXT").innerHTML;
-    var NOTE_TYPE = document.getElementById("NOTE_TYPE").innerHTML;
-    var PAGE_NUM = document.getElementById("PAGE_NUM").innerHTML;
-    var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
-    var LANG = document.getElementById("LANG").innerHTML;
-    if (GROUP_ID.value == "" || NOTE_ID.value == "" || NOTE_TXT.value == "" || NOTE_TYPE.value == "" || PAGE_NUM.value == "" || BOOK_ID.value == "" || LANG.value == "") {
+    var group_id = document.getElementById("group_id").innerHTML;
+    var note_id = document.getElementById("note_id").innerHTML;
+    var note_txt = document.getElementById("note_txt").innerHTML;
+    var note_type = document.getElementById("note_type").innerHTML;
+    var page_num = document.getElementById("page_num").innerHTML;
+    var book_id = document.getElementById("book_id").innerHTML;
+    var lang = document.getElementById("lang").innerHTML;
+    if (group_id.value == "" || note_id.value == "" || note_txt.value == "" || note_type.value == "" || page_num.value == "" || book_id.value == "" || lang.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -280,20 +280,20 @@ function insertnotes() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=insertnotes&q=" + GROUP_ID + "&r=" + NOTE_ID + "&s=" + NOTE_TXT + "&t=" + NOTE_TYPE + "&u=" + PAGE_NUM + "&v=" + BOOK_ID + "&w=" + LANG,true);
+        xmlhttp.open("GET","flypaper.php?p=insertnotes&q=" + group_id + "&r=" + note_id + "&s=" + note_txt + "&t=" + note_type + "&u=" + page_num + "&v=" + book_id + "&w=" + lang,true);
         xmlhttp.send();
     }
 }
 
 function insertquiz() {
-    var GROUP_ID = document.getElementById("GROUP_ID").innerHTML;
-    var QUIZ_ID = document.getElementById("QUIZ_ID").innerHTML;
-    var QUIZ_TXT = document.getElementById("QUIZ_TXT").innerHTML;
-    var QUIZ_TYPE = document.getElementById("QUIZ_TYPE").innerHTML;   
-    var BOOK_ID = document.getElementById("BOOK_ID").innerHTML;
-    var QUIZ_FMT = document.getElementById("QUIZ_FMT").innerHTML;
-    var STND_ID = document.getElementById("STND_ID").innerHTML;
-    if (GROUP_ID.value == "" || QUIZ_ID.value == "" || QUIZ_TXT.value == "" || QUIZ_TYPE.value == "" || BOOK_ID.value == "" || QUIZ_FMT.value == "" || STND_ID.value == "") {
+    var group_id = document.getElementById("group_id").innerHTML;
+    var quiz_id = document.getElementById("quiz_id").innerHTML;
+    var quiz_txt = document.getElementById("quiz_txt").innerHTML;
+    var quiz_type = document.getElementById("quiz_type").innerHTML;   
+    var book_id = document.getElementById("book_id").innerHTML;
+    var quiz_fmt = document.getElementById("quiz_fmt").innerHTML;
+    var stnd_id = document.getElementById("stnd_id").innerHTML;
+    if (group_id.value == "" || quiz_id.value == "" || quiz_txt.value == "" || quiz_type.value == "" || book_id.value == "" || quiz_fmt.value == "" || stnd_id.value == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -309,7 +309,7 @@ function insertquiz() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=insertquiz&q=" + GROUP_ID + "&r=" + QUIZ_ID + "&s=" + QUIZ_TXT + "&t=" + QUIZ_TYPE + "&u=" + BOOK_ID + "&v=" + QUIZ_FMT + "&w=" + STND_ID,true);
+        xmlhttp.open("GET","flypaper.php?p=insertquiz&q=" + group_id + "&r=" + quiz_id + "&s=" + quiz_txt + "&t=" + quiz_type + "&u=" + book_id + "&v=" + quiz_fmt + "&w=" + stnd_id,true);
         xmlhttp.send();
     }
 }
