@@ -121,7 +121,7 @@ function insertteacher() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=insertteacher&q=" + adltid + "&r=" + username + "&s=" + groupid + "&t=" + adltpswd, "&u=" + adltpmn + "&v=" + fname + "&w=" + lname + "&x=" + school + "&y=" + grade + "&z=" + email + "&a=" + username,true);
+        xmlhttp.open("GET","flypaper.php?p=insertteacher&q=" + adltid + "&r=" + username + "&s=" + groupid + "&t=" + adltpswd, "&u=" + adltpmn + "&v=" + fname + "&w=" + lname + "&x=" + school + "&y=" + grade + "&z=" + email,true);
         xmlhttp.send();
     }
 }
