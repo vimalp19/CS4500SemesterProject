@@ -65,7 +65,7 @@ VALUES ('1')";
 mysqli_query($con,$sql);	
 
 $sql="INSERT INTO ADULT_TBL (ADLT_ID, ADNAME, GROUP_ID, ADLT_PSWD, ADLT_PMN, FNAME, LNAME, SCHOOL, GRADE, EMAIL)
-VALUES ('".$q."', '".$a."', '".$r."', '".$s."', '".$t."', '".$u."', '".$v."', '".$w."', '".$x."', '".$y."', '".$z."')";
+VALUES ('".$q."', '".$r."', '".$s."', '".$t."', '".$u."', '".$v."', '".$w."', '".$x."', '".$y."', '".$z."')";
 $result = mysqli_query($con,$sql);	
 }
 elseif (p == "getbooksforpage") {
