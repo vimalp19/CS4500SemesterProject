@@ -101,12 +101,11 @@ function insertteacher() {
     var adltpmn = document.getElementById("adltpmn").innerHTML;
     var fname = document.getElementById("fname").innerHTML;
     var lname = document.getElementById("lname").innerHTML;
-    var age = document.getElementById("age").innerHTML;
     var school = document.getElementById("school").innerHTML;
     var grade = document.getElementById("grade").innerHTML;
     var email = document.getElementById("email").innerHTML;
 
-	if (adltid.value == "" || groupid.value == "" || adltpswd.value == "" || adltpmn.value == "" || fname.value == "" || lname.value == "" || age.value == "" || school.value == "" || grade.value == "" || email.value == "" || username.value "") {
+	if (adltid.value == "" || groupid.value == "" || adltpswd.value == "" || adltpmn.value == "" || fname.value == "" || lname.value == "" || school.value == "" || grade.value == "" || email.value == "" || username.value "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
     } else { 
@@ -122,7 +121,7 @@ function insertteacher() {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","flypaper.php?p=insertteacher&q=" + adltid + "&r=" + username + "&s=" + groupid + "&t=" + adltpswd, "&u=" + adltpmn + "&v=" + fname + "&w=" + lname + "&x=" + age + "&y=" + school + "&z=" + grade + "&a=" + email + "&b=" + username,true);
+        xmlhttp.open("GET","flypaper.php?p=insertteacher&q=" + adltid + "&r=" + username + "&s=" + groupid + "&t=" + adltpswd, "&u=" + adltpmn + "&v=" + fname + "&w=" + lname + "&x=" + school + "&y=" + grade + "&z=" + email + "&a=" + username,true);
         xmlhttp.send();
     }
 }
