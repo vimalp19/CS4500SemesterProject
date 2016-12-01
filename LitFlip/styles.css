@@ -8,6 +8,20 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+#prev, #next {
+    padding-top: 300px; 
+    text-align: center;
+}
+
+.glyphicon {
+    color: rgb(2, 110, 132);
+    font-size: 6.0vw;
+}
+
+.glyphicon:hover {
+    color: rgb(144, 146, 150);
+}
+
 #main {
     height: 100%;
     width: 75%;
@@ -34,9 +48,12 @@ footer {
 }
 
 .reader {
-    height: 500px;
+    /*height: 500px;*/
     text-align: center;
     vertical-align: middle;
+    min-height: 100px;
+    overflow: hidden;
+    font-size: 30px;
 }
 
 .navbar-custom {
