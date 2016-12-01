@@ -12,30 +12,19 @@
         <script src="build/epub.min.js"></script>
 
         <!-- Zip JS -->
-        <script src="build/zip.min.js"></script>
-        
-        <!-- <style type="text/css">
-            body {
-                overflow: auto;
-                background: #eee;
-            }
-        </style> -->
+        <script src="build/zip.min.js"></script>  
         
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
         
-        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                
         <script>
             "use strict";
-            var Book = ePub("./reader/moby-dick.epub", {
-              width: 400,
-              height: 500,
+            var Book = ePub("./reader/pg19033-images.epub", {
+              width: 540,
+              height: 650,
               spreads : false
             });
-            
-            Book.renderTo("area");
         </script>
         
     </head>
@@ -68,21 +57,21 @@
 
             <!-- /.container-fluid -->
         </nav>
-        <div class="container-fluid">
-            <div id="prev" onclick="book.prevPage();" class="reader col-xs-2 col-sm-2 col-lg-1">Back</div>
 
-            <div id="area" class = "reader col-xs-8 col-sm-8 col-lg-10"></div>
+        <br>       
+        
+        <div id="prev" onclick="Book.prevPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+        </div>
 
-            <div id="next" onclick="book.nextPage();" class="reader col-xs-2 col-sm-2 col-lg-1">Next</div>
+        <div id="area" class = "reader col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
+
+        <div id="next" onclick="Book.nextPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </div>
         
-        <!--
-        <script>
-            Book.renderTo("area");
-        </script>
-        -->
-
-        <br><br>
+        
+        <br><br><br>
         
         <footer>Copyright &copy; FlypPage 2016</footer>
         
