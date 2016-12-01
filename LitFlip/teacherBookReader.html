@@ -9,62 +9,24 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         
         <!-- EPUBJS Renderer -->
-        <script src="build/epub.min.js"></script>
+        <script src="./build/epub.min.js"></script>
 
         <!-- Zip JS -->
-        <script src="build/zip.min.js"></script>
+        <script src="./build/zip.min.js"></script>  
         
-        <!-- <style type="text/css">
-            body {
-                overflow: auto;
-                background: #eee;
-            }
-        </style> -->
+        <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
         
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="./styles.css" rel="stylesheet" type="text/css">
         
-        <link href="styles.css" rel="stylesheet" type="text/css">
-        
-        <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         
-        <script>                    
-            $(document).ready(function(){
-                $("#assignment").one ('click', function(){
-                    //$(".form-horizontal").toggle(); 
-                    $("#assignmentForm").append('<form class="form-horizontal"></form>');
-                    $("#assignmentForm form").append('<div class="form-group" id="addAssignmentName"></div>');
-                    $("#assignmentForm form #addAssignmentName").append('<label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="assignmentName">Assignment Name:</label>');
-                    $("#assignmentForm form #addAssignmentName").append('<div class="col-xs-6 col-md-4 col-lg-3"></div>');
-                    $("#assignmentForm form #addAssignmentName div").append('<input id="assignmentName" name="assignmentName" type="text" placeholder="Assignment Name" class="form-control input-md" required="">');
-                    
-                    $("#assignmentForm form").append('<div class="form-group" id="addAssignmentDescription"></div>');
-                    $("#assignmentForm form #addAssignmentDescription").append('<label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="assignmentDescription">Description:</label>');
-                    $("#assignmentForm form #addAssignmentDescription").append('<div class="col-xs-6 col-md-4 col-lg-3"></div>');
-                    $("#assignmentForm form #addAssignmentDescription div").append('<input id="assignmentDescription" name="assignmentDescription" type="text" placeholder="Assignment Description" class="form-control input-md" required="">');
-                    
-                    $("#assignmentForm form").append('<div class="form-group" id="cancelOrContinue"></div>');
-                    $("#assignmentForm form #cancelOrContinue").append('<div class="col-xs-8 col-xs-offset-2 col-lg-4 col-lg-offset-4"></div>');
-                    $("#assignmentForm form #cancelOrContinue div").append('<label id="add" class="checkbox-inline" for="addQuestion"></label>');
-                    $("#assignmentForm form #cancelOrContinue div #add").append('<input class="btn btn-success" type="button" name="addquestion" id="addquestion" value="Add Question">');
-                    $("#assignmentForm form #cancelOrContinue div").append('<label id="cancel" class="checkbox-inline" for="cancelAssignment"></label>');  
-                    $("#assignmentForm form #cancelOrContinue div #cancel").append('<input class="btn btn-success" type="button" name="cancelassignment" id="cancelassignment" value="Cancel">');
-                    
-                    $("#addquestion").one ('click', function(){
-                        $("#assignmentForm form").append('<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5 form-group btn-group-vertical" id="questionOptions">');
-                        $("assignmentForm form #questionOptions").append('<button type="button" class="btn btn-success">New Question</button>');
-                        $("assignmentForm form #questionOptions").append('<button type="button" class="btn btn-success">Pre-reading Question</button>');
-                        $("assignmentForm form #questionOptions").append('<button type="button" class="btn btn-success">Post-reading Question</button>');
-                    });
-                });
-            });
-        </script>
+        <script src="./js/createAssignment.js"> </script>
         
         <script>
             "use strict";
-            var Book = ePub("./reader/moby-dick.epub", {
-              width: 400,
-              height: 500,
+            var Book = ePub("./reader/pg19033-images.epub", {
+              width: 540,
+              height: 650,
               spreads : false
             });
         </script>
@@ -99,24 +61,31 @@
 
             <!-- /.container-fluid -->
         </nav>
-        <div class="container-fluid">
-            <div id="prev" onclick="book.prevPage();" class="reader col-xs-2 col-sm-2 col-lg-1">Back</div>
 
-            <div id="area" class = "reader col-xs-8 col-sm-8 col-lg-10"></div>
-
-            <div id="next" onclick="book.nextPage();" class="reader col-xs-2 col-sm-2 col-lg-1">Next</div>
+        <br>       
+        
+        <div id="prev" onclick="Book.prevPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
         </div>
+
+        <div id="area" class = "reader col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
+
+        <div id="next" onclick="Book.nextPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </div>
+        
+        
         <script>
             Book.renderTo("area");
         </script>
 
-        <br>
+        <br><br><br>
         
         <!-- Create a new assignment -->
         <div class="container-fluid">
             <div class="row">
                 <div>
-                    <label class="col-xs-4 col-xs-offset-3 col-sm-4 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 checkbox-inLine" for="assignment">
+                    <label class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 checkbox-inLine" for="assignment">
                         <input class="btn btn-success btn-lg" type="button" name="assignment" id="assignment" value="New Assignment">
                     </label>
                 </div>
@@ -124,45 +93,11 @@
             
             <br>
             
-            <div class="row" id="assignmentForm">
+            <div class="row">
                 
-                <!--
-                <form class="form-horizontal">
-                
-                    <div class="form-group" id="addAssignmentName">
-                        <label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="assignmentName">Assignment Name:</label>
-                        <div class="col-xs-6 col-md-4 col-lg-3">
-                            <input id="assignmentName" name="assignmentName" type="text" placeholder="Assignment Name" class="form-control input-md" required="">
-                        </div>
-                    </div>
-                    <div class="form-group" id="addAssignmentDescription">
-                        <label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="assignmentDescription">Description:</label>
-                        <div class="col-xs-6 col-md-4 col-lg-3">
-                            <input id="assignmentDescription" name="assignmentDescription" type="text" placeholder="Assignment Description" class="form-control input-md" required="">
-                        </div>
-                    </div>
-                    <div class="form-group" id="cancelAssignment">
-                        <div class="col-xs-8 col-xs-offset-2">
-                            <label class="checkbox-inline" for="cancelAssignment">
-                                <input class="btn btn-success" type="button" name="cancel" id="cancel" value="Cancel">
-                            </label>
-                        </div>
-                    </div>
-                                        
-                    <div class="col-xs-4 col-xs-offset-3 col-sm-4 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 form-group btn-group" id="questionOptions">
-                        <button type="button" class="btn btn-success">Create New Question</button>
-                        <button type="button" class="btn btn-success">Choose Pre-reading Question</button>
-                        <button type="button" class="btn btn-success">Choose Post-reading Question</button>
-                    </div>
- 
+                <form class="form-horizontal" id="assignmentForm">
+
                 </form>
-                
-                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5 form-group btn-group-vertical" id="questionOptions">
-                    <button type="button" class="btn btn-success">New Question</button>
-                    <button type="button" class="btn btn-success">Pre-reading Question</button>
-                    <button type="button" class="btn btn-success">Post-reading Question</button>
-                </div>
-                -->
 
             </div>
         </div>
@@ -171,6 +106,6 @@
         
         <footer>Copyright &copy; FlypPage 2016</footer>
         
-        <script src="js/bootstrap.js"></script>
+        <script src="./js/bootstrap.js"></script>
     </body>
 </html>
