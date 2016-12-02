@@ -29,7 +29,6 @@ CREATE TABLE ADULT_TBL
   ADLT_PMN varchar(100) DEFAULT NULL,
   FNAME varchar(40) NOT NULL,
   LNAME varchar(40) NOT NULL,
-  AGE varchar(40) NOT NULL,
   SCHOOL varchar(40) NOT NULL,
   GRADE varchar(40) NOT NULL,
   EMAIL varchar(40) NOT NULL,
