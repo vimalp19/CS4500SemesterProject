@@ -84,7 +84,7 @@
                                         <p>Frank R. Stockton</p>
                                         <p>Short Story</p>
                                         <p>
-                                            <a href="studentBookReader.html" class="btn btn-primary" role="button" onClick="javascript:whichBook('./reader/TheLadyOrTheTiger')">Read Book</a>
+                                            <a href="studentBookReader.html" class="btn btn-primary" role="button" onClick="javascript:whichBook('./reader/TheLadyOrTheTiger.epub')">Read Book</a>
                                             <!-- <a href="#" class="btn btn-default" role="button">Button</a> -->
                                         </p>
                                     </div>
@@ -128,8 +128,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.js"></script>
         <script> function whichBook(passedBook){
-            var book = passedBook;
-            alert(book);
+            alert(passedBook);
+            alert(passedBook.id);
             }
 </script>
     </body>
