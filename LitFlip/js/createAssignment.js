@@ -234,14 +234,14 @@ jQuery(function($) {
 		
 		if ($('.addQuestion').attr('id') == questionToRemove) {
 		
-			var remove = $('.addQuestion').attr('id');
-			alert (remove);
-			$("#" + remove).remove();
+			var Remove = $('.addQuestion').attr('id');
+			alert (Remove + "\n#" + Remove);
+			$("#" + Remove).remove();
 		}
 			
-		$(answerToRemove).remove();
+		//$(answerToRemove).remove();
 		
-		$(deleteButtonToRemove).remove();
+		//$(deleteButtonToRemove).remove();
 		
 		questionCount--;    //Update the question number count
 		
