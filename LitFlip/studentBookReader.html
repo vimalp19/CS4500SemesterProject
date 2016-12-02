@@ -23,9 +23,10 @@
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
-            var Book = function callBook(value){
-                object.innerHTML=value;
-                ePub("./reader/"+value, {
+            function(){
+                Array.prototype.forEach.call(document.querySelectorAll("a.btn btn-primary");
+                                             var Book = getAttribute("data-extra");
+            var Book = ePub(Book, {
               width: 540,
               height: 650,
               spreads : false
