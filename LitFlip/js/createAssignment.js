@@ -236,7 +236,7 @@ jQuery(function($) {
 		
 			var remove = $('.addQuestion').attr('id');
 			alert (remove);
-			$(questionToRemove).remove();
+			$(this).remove();
 		}
 			
 		$(answerToRemove).remove();
