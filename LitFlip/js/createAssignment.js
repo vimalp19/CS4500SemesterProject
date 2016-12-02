@@ -66,6 +66,7 @@ jQuery(function($) {
             $('.addQuestion').remove();
             $('.addAnswer').remove();
 			$('.deleteQuestion').remove();
+			$('.breakInForm').remove();
 		
 			questionCount = 1;    //Reset the question count
             showAssignment = 0;   //Indicate that the assignment information is no longer being displayed
