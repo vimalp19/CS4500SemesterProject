@@ -232,7 +232,7 @@ jQuery(function($) {
 		var answerToRemove = "#addAnswerDiv_" + questionNum;
 		var deleteButtonToRemove = "#deleteQuestionDiv_" + questionNum;
 		
-		alert ($('.addQuestion').attr('id'));
+		alert (questionNum);
 		
 		if ($('.addQuestion').attr('id') == questionToRemove) {
 		
