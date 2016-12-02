@@ -128,7 +128,9 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.js"></script>
         <script> function whichBook(passedBook){
-                alert("dang");
+            <form action="studentBookReader.html" id="formid" method=GET>
+            <input type="hidden" name="book" value=passedBook> </form>
+                document.getElementById("formid").submit();
             }
 </script>
     </body>
