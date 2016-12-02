@@ -28,6 +28,10 @@
               height: 650,
               spreads : false
             });
+            
+            //Used to render the book onto the page 
+            Book.renderTo("area");
+
         </script>
         
     </head>
@@ -72,13 +76,8 @@
         <div id="next" onclick="Book.nextPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </div>
-        
-        <!-- Used to render the book onto the page -->
-        <script>
-            Book.renderTo("area");
-        </script>
-            
-        <br> <br> <br>
+   
+        <br> <br> 
         
         <footer>Copyright &copy; FlypPage 2016</footer>
         
