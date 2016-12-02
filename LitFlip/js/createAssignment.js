@@ -227,6 +227,8 @@ jQuery(function($) {
 		var questionToDelete = $(this).attr('id').split(' ');
 		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
+		alert (questionNum);
+		
 		//Then proceed with removing the question, answer, and delete button for that question
 		$(("#addQuestionDiv" + questionNum)).remove();
 		$(("#addAnswerDiv" + questionNum)).remove();
