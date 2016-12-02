@@ -208,8 +208,6 @@ jQuery(function($) {
         $('#newquestion').attr('id', question);
         $('#addQuestionDiv').attr('id', questionDiv);
 		
-		alert ($('.addQuestion').attr('id'));
-		
         $(answer).appendTo("#assignmentForm");
         $('#answer').attr('id', newAnswer);
 		$('#addAnswerDiv').attr('id', newAnswerDiv);
@@ -229,12 +227,10 @@ jQuery(function($) {
 		var questionToDelete = $(this).attr('id').split(' ');
 		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
-		alert ("#addQuestionDiv" + questionNum);
-		
 		//Then proceed with removing the question, answer, and delete button for that question
-		$(("#addQuestionDiv" + questionNum)).remove();
-		$(("#addAnswerDiv" + questionNum)).remove();
-		$(("#deleteQuestionDiv" + questionNum)).remove();
+		$(("#addQuestionDiv " + questionNum)).remove();
+		$(("#addAnswerDiv " + questionNum)).remove();
+		$(("#deleteQuestionDiv " + questionNum)).remove();
 		
 		questionCount--;    //Update the question number count
 		
