@@ -224,7 +224,7 @@ jQuery(function($) {
 	$(document).on('click', '.deleteQuestionButton', function() {
 		
 		var questionToDelete = $(this).attr('id').split(' ');
-		var questionNum = questionToDelete.split[questionToDelete.length - 1];
+		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
 		alert (questionNum);
 	});
