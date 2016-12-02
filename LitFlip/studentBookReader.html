@@ -14,10 +14,13 @@
         <!-- Zip JS -->
         <script src="./build/zip.min.js"></script>  
         
+        <!-- Bootstrap CSS -->
         <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
         
+        <!-- Application Personalized CSS -->
         <link href="./styles.css" rel="stylesheet" type="text/css">
-        
+         
+        <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
             var Book = ePub("./reader/AliceInWonderland.epub", {
@@ -29,9 +32,10 @@
         
     </head>
     <body>
+        
+        <!-- Navigation bar at the top of the web page -->
         <nav class="navbar navbar-inverse navbar-custom">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -41,7 +45,6 @@
                     </button>
                     <a class="navbar-brand" href="studentHome.html">FlypPage</a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="inverseNavbar1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -52,43 +55,33 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-
-            <!-- /.container-fluid -->
         </nav>
 
         <br>       
         
+        <!-- Hold the button to go a page back in the book -->
         <div id="prev" onclick="Book.prevPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <span class="glyphicon glyphicon-circle-arrow-left"></span>
         </div>
 
+        <!-- Display the book onto this <div> -->
         <div id="area" class = "reader col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
 
+        <!-- Hold the button to go a page forward in the book -->
         <div id="next" onclick="Book.nextPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </div>
         
-        
+        <!-- Used to render the book onto the page -->
         <script>
             Book.renderTo("area");
         </script>
-
-        <br><br><br>
-        
-        <!-- Create a new assignment -->
-        <div class="row">
-            <label class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 checkbox-inLine" for="assignment">
-                <input class="btn btn-success btn-lg" type="button" name="assignment" id="assignment" value="New Assignment">
-            </label>
-        </div>
             
         <br> 
         <br>
         
         <footer>Copyright &copy; FlypPage 2016</footer>
         
-        <script src="./js/bootstrap.js"></script>
     </body>
 </html>
