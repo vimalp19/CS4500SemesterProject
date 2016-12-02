@@ -65,7 +65,12 @@ jQuery(function($) {
             
             //And also any questions that were created
             $('.addQuestion').remove();
-            $('addAnswer').remove();
+            $('.addAnswer').remove();
+			$('.deleteQuestion').remove();
+		
+			//Reset the question and answer count
+			questionCount = 0;
+			answerCount = 0;
         
             showAssignment = 0;   //Indicate that the assignment information is no longer being displayed
         }
@@ -155,19 +160,24 @@ jQuery(function($) {
     //Function that is triggered when the button for creating new question is clicked
     $(document).on ('click', '#createNewQuestion', function() {
         
-		//Used to generate the id for the question and its answer
+		//Used to generate the id for the question, its answer, and the delete button
         var question = "newQuestion" + questionCount;
         var newAnswer = "answer" + answerCount;
-        
-		//Proceed with displaying input boxes for creating the new question and its answer
+        var deletequestion = "deletQuestion" + questionCount;
+		
+		//Proceed with displaying input boxes for creating the new question and its answer, and the delete question button
         var newQuestion = $('<br><br> <div class="form-group addQuestion" id="addNewQuestion"> <label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="newQuestion">Create New Question:</label> <div class="col-xs-6 col-md-4 col-lg-3"> <input id="newquestion" name="newquestion" type="text" placeholder="Question" class="form-control input-md" required=""> </div> </div>');
         var answer = $('<div class="form-group addAnswer"> <label class="col-xs-4 col-xs-offset-1 col-lg-2 col-lg-offset-3 control-label" for="Answer">Answer:</label> <div class="col-xs-6 col-md-4 col-lg-3"> <input id="answer" name="answer" type="text" placeholder="Answer" class="form-control input-md" required=""> </div> </div>');
-        
+        var deleteQuestion = $('<br> <div class="form-group deleteQuestion"><label class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5" for="deleteQuestion"> <input class="btn btn-success" type="button" name="deleteQuestion" id="deleteQuestion" value="Delete"> </label> </div>');
+		
         $(newQuestion).appendTo("#assignmentForm");
         $('#newquestion').attr('id', question);
         
         $(answer).appendTo("#assignmentForm");
         $('#answer').attr('id', newAnswer);
+		
+		$(deleteQuestion).appendTo("#assignmentForm");
+		$('#deleteQuestion').attr('id', deletequestion);
         
 		//Update the question and answer count
         questionCount++;
