@@ -55,10 +55,11 @@ jQuery(function($) {
 			//Proceed with hiding all of the assignment information
             $('#addAssignmentName').hide();
             $('#addAssignmentDescription').hide();
-            $(newQuestionButton).hide();
-            $(prereadingButton).hide();
-            $(duringreadingButton).hide();
-            $(postreadingButton).hide();
+			$('#cancelOrContinue').hide();
+            $(newQuestionButton).remove();
+            $(prereadingButton).remove();
+            $(duringreadingButton).remove();
+            $(postreadingButton).remove();
         
             showAssignment = 0;   //Indicate that the assignment information is no longer being displayed
         }
