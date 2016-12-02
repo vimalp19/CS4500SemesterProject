@@ -232,6 +232,8 @@ jQuery(function($) {
 		var answerToRemove = "#addAnswerDiv_" + questionNum;
 		var deleteButtonToRemove = "#deleteQuestionDiv_" + questionNum;
 		
+		alert ($('.addQuestion').attr('id'));
+		
 		if ($('.addQuestion').attr('id') == questionToRemove) {
 		
 			var Remove = $('.addQuestion').attr('id');
