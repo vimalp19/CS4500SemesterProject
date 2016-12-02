@@ -191,7 +191,7 @@ jQuery(function($) {
 	//Function that is triggered when the button for deleting a question is clicked
 	$(document).on('click', '.deleteQuestionButton', function() {
 		
-		alert ((this).attr('id'));
+		alert ($(this).attr('id'));
 	});
     
 });
