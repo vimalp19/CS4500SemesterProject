@@ -223,10 +223,17 @@ jQuery(function($) {
 	//Function that is triggered when the button for deleting a question is clicked
 	$(document).on('click', '.deleteQuestionButton', function() {
 		
+		//Use the ID of the button clicked to find the question number for that delete button
 		var questionToDelete = $(this).attr('id').split(' ');
 		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
-		alert (questionNum);
+		//Then proceed with removing the question, answer, and delete button for that question
+		$(("#addQuestionDiv" + questionNum)).remove();
+		$(("#addAnswerDiv" + questionNum)).remove();
+		$(("#deleteQuestionDiv" + questionNum)).remove();
+		
+		questionCount--;    //Update the question number count
+		
 	});
     
 });
