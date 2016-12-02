@@ -229,25 +229,17 @@ jQuery(function($) {
 		
 		//Then proceed with removing the question, answer, and delete button for that question
 		var questionToRemove = "addQuestionDiv_" + questionNum;
-		var answerToRemove = "#addAnswerDiv_" + questionNum;
-		var deleteButtonToRemove = "#deleteQuestionDiv_" + questionNum;
-		
-		alert (questionNum);
-		
-		if ($('.addQuestion').attr('id') == questionToRemove) {
-		
-			var Remove = $('.addQuestion').attr('id');
-			alert (Remove + "\n#" + Remove);
-			$("#" + Remove).remove();
-		}
-			
-		//$(answerToRemove).remove();
-		
-		//$(deleteButtonToRemove).remove();
+		var answerToRemove = "addAnswerDiv_" + questionNum;
+		var deleteButtonToRemove = "deleteQuestionDiv_" + questionNum;
+
+		$("#" + questionToRemove).remove();
+		$("#" + answerToRemove).remove();	
+		$("#" + deleteButtonToRemove).remove();
 		
 		questionCount--;    //Update the question number count
 		
 	});
     
 });
-
+			
+alert (Remove + "\n#" + Remove);
