@@ -228,12 +228,19 @@ jQuery(function($) {
 		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
 		//Then proceed with removing the question, answer, and delete button for that question
-		var questionToRemove = "#addQuestionDiv " + questionNum;
+		var questionToRemove = "addQuestionDiv " + questionNum;
 		var answerToRemove = "#addAnswerDiv " + questionNum;
 		var deleteButtonToRemove = "#deleteQuestionDiv " + questionNum;
 		
-		$(questionToRemove).remove();
+		if ($('.addQuestion').attr('id') == questionToRemove) {
+		
+			var remove = $('.addQuestion').attr('id');
+			alert (remove);
+			$(questionToRemove).remove();
+		}
+			
 		$(answerToRemove).remove();
+		
 		$(deleteButtonToRemove).remove();
 		
 		questionCount--;    //Update the question number count
