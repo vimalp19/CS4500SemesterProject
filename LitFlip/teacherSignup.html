@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlypPage - Create Teacher Account</title>
+    <title>FlypPage - Create Adult Account</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -47,7 +47,7 @@
     <form class="form-horizontal" onSubmit="return insertteacher()">
 
             <!-- Form Name -->
-            <legend class="form-title">NEW TEACHER ACCOUNT</legend>
+            <legend class="form-title">NEW ADULT ACCOUNT</legend>
 
             <!-- Username -->
             <div class="form-group">
@@ -89,8 +89,8 @@
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
                     <label for="school">School Name:</label>
-                    <input id="school" name="school" type="text" placeholder="School Name" class="form-control" required="">
-                    <span>Please enter the name of the school you are teaching at</span>
+                    <input id="school" name="school" type="text" placeholder="School Name" class="form-control">
+                    <span>If you are a teacher, please enter the name of the school you are teaching at</span>
                 </div>
             </div>
 	    
@@ -98,7 +98,7 @@
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
                     <label for="grade">Grade:</label>
-                    <select required class="form-control" id="grade">
+                    <select class="form-control" id="grade">
 			<option value=""></option>
                         <option value="k">k</option>
                         <option value="1">1</option>
@@ -110,7 +110,7 @@
                         <option value="7">7</option>
                         <option value="8">8</option>
                     </select>
-                    <span>Please  enter in the grade level that you teach</span>
+                    <span>If you are a teacher, please  enter in the grade level that you teach</span>
                 </div>
             </div>
 	    
