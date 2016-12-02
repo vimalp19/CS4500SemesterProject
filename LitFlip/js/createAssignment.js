@@ -242,5 +242,3 @@ jQuery(function($) {
 	});
     
 });
-			
-alert (Remove + "\n#" + Remove);
