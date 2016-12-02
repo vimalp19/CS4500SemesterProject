@@ -208,7 +208,7 @@ jQuery(function($) {
         $('#newquestion').attr('id', question);
         $('#addQuestionDiv').attr('id', questionDiv);
 		
-		alert ($('#addQuestionDiv').attr('id'));
+		alert ($('.addQuestion').attr('id'));
 		
         $(answer).appendTo("#assignmentForm");
         $('#answer').attr('id', newAnswer);
