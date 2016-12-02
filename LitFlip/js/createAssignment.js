@@ -88,13 +88,13 @@ jQuery(function($) {
     $(document).on ('click', '#prereading', function() {
         
 		//Used to generate the id for the question, its answer, and the delete button
-        var question = "question " + questionCount;
-        var newAnswer = "answer " + questionCount;
-		var deletequestion = "deleteQuestion " + questionCount;
+        var question = "question_" + questionCount;
+        var newAnswer = "answer_" + questionCount;
+		var deletequestion = "deleteQuestion_" + questionCount;
         
-		var questionDiv = "addQuestionDiv " + questionCount;
-		var newAnswerDiv = "addAnswerDiv " + questionCount;
-		var deleteQuestionDiv = "deleteQuestionDiv " + questionCount;
+		var questionDiv = "addQuestionDiv_" + questionCount;
+		var newAnswerDiv = "addAnswerDiv_" + questionCount;
+		var deleteQuestionDiv = "deleteQuestionDiv_" + questionCount;
 		
 		
 		//Proceed with displaying the options in pre-reading question and an input box for its answer, and the delete question button
@@ -122,13 +122,13 @@ jQuery(function($) {
     $(document).on ('click', '#duringreading', function() {
         
 		//Used to generate the id for the question, its answer, and the delete button
-        var question = "question " + questionCount;
-        var newAnswer = "answer " + questionCount;
-		var deletequestion = "deleteQuestion " + questionCount;
+        var question = "question_" + questionCount;
+        var newAnswer = "answer_" + questionCount;
+		var deletequestion = "deleteQuestion_" + questionCount;
         
-		var questionDiv = "addQuestionDiv " + questionCount;
-		var newAnswerDiv = "addAnswerDiv " + questionCount;
-		var deleteQuestionDiv = "deleteQuestionDiv " + questionCount;
+		var questionDiv = "addQuestionDiv_" + questionCount;
+		var newAnswerDiv = "addAnswerDiv_" + questionCount;
+		var deleteQuestionDiv = "deleteQuestionDiv_" + questionCount;
 		
         
 		//Proceed with displaying the options in the during eading question and an input box for its answer, and the delete question button
@@ -156,13 +156,13 @@ jQuery(function($) {
     $(document).on ('click', '#postreading', function() {
         
 		//Used to generate the id for the question, its answer, and the delete button
-        var question = "question " + questionCount;
-        var newAnswer = "answer " + questionCount;
-		var deletequestion = "deleteQuestion " + questionCount;
+        var question = "question_" + questionCount;
+        var newAnswer = "answer_" + questionCount;
+		var deletequestion = "deleteQuestion_" + questionCount;
         
-		var questionDiv = "addQuestionDiv " + questionCount;
-		var newAnswerDiv = "addAnswerDiv " + questionCount;
-		var deleteQuestionDiv = "deleteQuestionDiv " + questionCount;
+		var questionDiv = "addQuestionDiv_" + questionCount;
+		var newAnswerDiv = "addAnswerDiv_" + questionCount;
+		var deleteQuestionDiv = "deleteQuestionDiv_" + questionCount;
 		
         
 		//Proceed with displaying the options in post-reading question and an input box for its answer, and the delete question button
@@ -190,13 +190,13 @@ jQuery(function($) {
     $(document).on ('click', '#createNewQuestion', function() {
         
 		//Used to generate the id for the question, its answer, and the delete button
-        var question = "question " + questionCount;
-        var newAnswer = "answer " + questionCount;
-		var deletequestion = "deleteQuestion " + questionCount;
+        var question = "question_" + questionCount;
+        var newAnswer = "answer_" + questionCount;
+		var deletequestion = "deleteQuestion_" + questionCount;
         
-		var questionDiv = "addQuestionDiv " + questionCount;
-		var newAnswerDiv = "addAnswerDiv " + questionCount;
-		var deleteQuestionDiv = "deleteQuestionDiv " + questionCount;
+		var questionDiv = "addQuestionDiv_" + questionCount;
+		var newAnswerDiv = "addAnswerDiv_" + questionCount;
+		var deleteQuestionDiv = "deleteQuestionDiv_" + questionCount;
 		
 		
 		//Proceed with displaying input boxes for creating the new question and its answer, and the delete question button
@@ -228,9 +228,9 @@ jQuery(function($) {
 		var questionNum = questionToDelete[questionToDelete.length - 1];
 		
 		//Then proceed with removing the question, answer, and delete button for that question
-		var questionToRemove = "addQuestionDiv " + questionNum;
-		var answerToRemove = "#addAnswerDiv " + questionNum;
-		var deleteButtonToRemove = "#deleteQuestionDiv " + questionNum;
+		var questionToRemove = "addQuestionDiv_" + questionNum;
+		var answerToRemove = "#addAnswerDiv_" + questionNum;
+		var deleteButtonToRemove = "#deleteQuestionDiv_" + questionNum;
 		
 		if ($('.addQuestion').attr('id') == questionToRemove) {
 		
