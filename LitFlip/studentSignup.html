@@ -8,20 +8,12 @@
     <title>FlypPage - Create Student Account</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-
     <nav class="navbar navbar-inverse navbar-custom" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -31,7 +23,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">FlypPage</a>
+          <!-- There is already a link to index.html, so this link is empty -->
+          <a class="navbar-brand" href="#">FlypPage</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,7 +38,7 @@
     </nav>
 
     <div class="container-fluid">
-    <form class="form-horizontal" onSubmit="return insertstudent()">
+    <form class="form-horizontal" onsubmit="return insertstudent()">
         <fieldset>
 
             <!-- Form Name -->
@@ -59,7 +52,7 @@
                     <span>Please enter in your username</span>
                 </div>
             </div>
-            
+
             <!-- First Name -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -68,7 +61,6 @@
                     <span>Please enter in your first name</span>
                 </div>
             </div>
-
 
              <!-- Last Name -->
             <div class="form-group">
@@ -128,7 +120,7 @@
                     <span>What grade are you in currently or will be entering at the beginning of the new school year?</span>
                 </div>
             </div>
-            
+
             <!-- Teacher Passcode -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -137,7 +129,7 @@
                     <span>If you are signing up for a class at school, please enter the access code given by your teacher</span>
                 </div>
             </div>
-            
+
             <!-- Reading Level -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -146,7 +138,7 @@
                     <span>Don't know your reading level? Find out now by clicking here</span>
                 </div>
             </div>
-            
+
             <!-- Reading Frequency -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -160,7 +152,7 @@
                     <span>Please select the option that best fits how often you read</span>
                 </div>
             </div>
-            
+
             <!-- Reading Purpose -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -173,7 +165,7 @@
                     <span>Please select the option that best fits why you do reading</span>
                 </div>
             </div>
-            
+
             <!-- Reading Enjoyment -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -181,13 +173,13 @@
                     <select required class="form-control" id="readingenjoy">
                         <option value=""></option>
                         <option value="A lot">A lot</option>
-                        <option value="A little">A little</option> 
+                        <option value="A little">A little</option>
                         <option value="Not at all">Not at all</option>
                     </select>
                     <span>Please select the option that describes how much you enjoy reading</span>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"></label>
                 <div class="col-md-4">

@@ -7,19 +7,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        
+
         <!-- EPUBJS Renderer -->
         <script src="./build/epub.min.js"></script>
 
         <!-- Zip JS -->
-        <script src="./build/zip.min.js"></script>  
-        
+        <script src="./build/zip.min.js"></script>
+
         <!-- Bootstrap CSS -->
         <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
-        
+
         <!-- Application Personalized CSS -->
-        <link href="./styles.css" rel="stylesheet" type="text/css">
-         
+        <link href="./css/styles.css" rel="stylesheet" type="text/css">
+
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
@@ -28,15 +28,15 @@
               height: 650,
               spreads : false
             });
-            
-            //Used to render the book onto the page 
+
+            //Used to render the book onto the page
             Book.renderTo("area");
 
         </script>
-        
+
     </head>
     <body>
-        
+
         <!-- Navigation bar at the top of the web page -->
         <nav class="navbar navbar-inverse navbar-custom">
             <div class="container-fluid">
@@ -47,14 +47,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <!-- Now that you are logged in, this brings you to your 'homepage', instead of the index.html for login -->
                     <a class="navbar-brand" href="studentHome.html">FlypPage</a>
                 </div>
                 <div class="collapse navbar-collapse" id="inverseNavbar1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href=#>Account</a>
+                            <!-- This should either bring you to your account page OR simply display your login ID -->
+                            <a href="#">Account</a>
                         </li>
                         <li>
+                            <!-- This is supposed to log you out and bring you back to the index.html page -->
                             <a href="#">Logout</a>
                         </li>
                     </ul>
@@ -62,8 +65,8 @@
             </div>
         </nav>
 
-        <br>       
-        
+        <br>
+
         <!-- Hold the button to go a page back in the book -->
         <div id="prev" onclick="Book.prevPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <span class="glyphicon glyphicon-circle-arrow-left"></span>
@@ -76,12 +79,12 @@
         <div id="next" onclick="Book.nextPage();" class="reader col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </div>
-   
+
         <div></div>
-        
-        <br> <br> 
-        
+
+        <br> <br>
+
         <footer>Copyright &copy; FlypPage 2016</footer>
-        
+
     </body>
 </html>

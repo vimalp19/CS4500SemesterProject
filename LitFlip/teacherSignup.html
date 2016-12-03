@@ -8,20 +8,12 @@
     <title>FlypPage - Create Teacher Account</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-
     <nav class="navbar navbar-inverse navbar-custom" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -31,20 +23,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">FlypPage</a>
+          <!-- already at the login page, no need to have link assigned -->
+          <a class="navbar-brand" href="#">FlypPage</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="#">User-ID</a></li> -->
             <li><a href="index.html">Login</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <form class="form-horizontal" onSubmit="return insertteacher()">
+    <form class="form-horizontal" onsubmit="return insertteacher()">
 
             <!-- Form Name -->
             <legend class="form-title">NEW TEACHER ACCOUNT</legend>
@@ -57,7 +49,7 @@
                     <span>Please enter in your username</span>
                 </div>
             </div>
-	    
+
 	    <!-- Password -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -66,7 +58,7 @@
                     <span>Please enter in your password</span>
                 </div>
             </div>
-	    
+
 	    <!-- First Name -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -75,7 +67,7 @@
                     <span>Please enter in your first name</span>
                 </div>
             </div>
-	    
+
 	    <!-- Last Name -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -84,7 +76,7 @@
                     <span>Please enter in your last name</span>
                 </div>
             </div>
-	    
+
 	    <!-- School Name -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -93,7 +85,7 @@
                     <span>Please enter the name of the school you are teaching at</span>
                 </div>
             </div>
-	    
+
 	    <!-- Grade -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -113,7 +105,7 @@
                     <span>Please  enter in the grade level that you teach</span>
                 </div>
             </div>
-	    
+
 	    <!-- Email Address -->
             <div class="form-group">
                 <div class="col-xs-6 col-xs-offset-3" align="center">
@@ -122,8 +114,6 @@
                     <span>Please enter in your email address</span>
                 </div>
             </div>
-	    
-	    
 
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"></label>
