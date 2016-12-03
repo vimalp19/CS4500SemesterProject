@@ -1,16 +1,18 @@
+//determine if a teacher or student is logging in, and go to that type of home page
 function boxnum() {
     if(document.getElementbyId('switch').checked)
     {
-	 $(ë#loginí).attr(ëactioní, ìstudentHome.htmlî);
-	 checkforstudent();
+	 $(‚Äò#login‚Äô).attr(‚Äòaction‚Äô, ‚ÄústudentHome.html‚Äù);
+	 //checkforstudent();
     }
     else
     {
-	$(ë#loginí).attr(ëactioní, ìteacherHome.htmlî);
-	checkforstudent();
+	$(‚Äò#login‚Äô).attr(‚Äòaction‚Äô, ‚ÄúteacherHome.html‚Äù);
+	//checkforstudent();
     }
 }	
 
+	   //pass data for student login to php
 function checkforstudent() {
 	var username = document.getElementById("loginname").innerHTML;
 	var password = document.getElementById("password").innerHTML;
@@ -35,6 +37,7 @@ function checkforstudent() {
     }
 }
 
+	    //pass data for teacher login to php
 function checkforteacher() {
     var username = document.getElementById("loginname").innerHTML;
     var password = document.getElementById("password").innerHTML;
@@ -59,6 +62,7 @@ function checkforteacher() {
     }
 }
 
+	    //pass data for adding a student to the database to php
 function insertstudent() {
     var stdntid = document.getElementById("username").innerHTML;
     var adultid = document.getElementById("accesscode").innerHTML;
@@ -93,6 +97,7 @@ function insertstudent() {
     }
 }
 
+	    //pass data for adding a teacher to the database to php
 function insertteacher() {
     var adltid = document.getElementById("adltid").innerHTML;
     var username = document.getElementById("username").innerHTML;
@@ -126,6 +131,7 @@ function insertteacher() {
     }
 }
 
+	    //pass data for getting book info
 function getbooksforpage() {
     var username = document.getElementById("username").innerHTML;
     if (username.value == "") {
@@ -149,6 +155,7 @@ function getbooksforpage() {
     }
 }
 
+	    //pass data for book search
 function searchforbook() {
     var bookName = document.getElementById("bookName").innerHTML;
     var stndid = document.getElementById("username").innerHTML;
@@ -173,6 +180,7 @@ function searchforbook() {
     }
 }
 
+	    //pass data to add a book to the database to php
 function insertbook() {
     var bookName = document.getElementById("bookName").innerHTML;
     var chapters = document.getElementById("chapters").innerHTML;
@@ -206,6 +214,7 @@ function insertbook() {
     }
 }
 
+	    //pass data for adding to vocab list to php
 function insertvocab() {
     var vocab_id = document.getElementById("vocab_id").innerHTML;
     var vocab_term = document.getElementById("vocab_term").innerHTML;
@@ -234,6 +243,7 @@ function insertvocab() {
     }
 }
 
+	    //pass data to retrieve a vocab list
 function getvocab() {
     var vocab_id;
     var vocab_term;
@@ -255,6 +265,7 @@ function getvocab() {
     }
 }
 
+	//pass notes for a book to php
 function insertnotes() {
     var group_id = document.getElementById("group_id").innerHTML;
     var note_id = document.getElementById("note_id").innerHTML;
@@ -284,6 +295,7 @@ function insertnotes() {
     }
 }
 
+	//pass quiz questions to php
 function insertquiz() {
     var group_id = document.getElementById("group_id").innerHTML;
     var quiz_id = document.getElementById("quiz_id").innerHTML;
@@ -313,6 +325,7 @@ function insertquiz() {
     }
 }
 
+	//possible alternative to pass data with jquery
 function testJS(){
 var name = jQuery("#name").val();
 jQuery.load("next.html",function(){
