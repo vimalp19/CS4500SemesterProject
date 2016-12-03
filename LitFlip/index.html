@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <!-- header for loginpage -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     </head>
     
     
-    
+    <!-- tabs to refresh login page -->
     <body>
         <div class="container-fluid" style="margin-top:40px">
             <nav class="navbar navbar-inverse navbar-custom" role="navigation">
@@ -39,10 +40,12 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <!-- <strong>ARE YOU A STUDENT</strong> -->
+                            <!-- checkbox to determine if a teacher or student is logging in(default student) -->
                             <span class="label label-default">Are you a Student?</span>
                             <input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked>
                         </div>
                         <div class="panel-body">
+                            <!-- standard username, password -->
                             <form role="form" name="login" id="login" onSubmit="return boxnum()" method="POST">
                                 <fieldset>
                                     <div class="row">
@@ -76,8 +79,10 @@
                                                 <br>
                                                 <span class="label label-default">Don't have an Account?</span>
                                                 <br>
+                                                <!-- link for new student to register -->
                                                 <a href="studentSignup.html">Student</a>
                                                 <span>|</span>
+                                                <!-- link for new teacher to register -->
                                                 <a href="teacherSignup.html">Teacher</a>
                                             </div>
                                         </div>
@@ -90,6 +95,7 @@
             </div>
         </div>
         <footer>Copyright &copy; FlypPage 2016</footer>
+        <!-- all javascript include to run functions -->
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/flypaperjavascript.js"></script>
