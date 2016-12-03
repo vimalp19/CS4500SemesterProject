@@ -3,12 +3,12 @@ function boxnum() {
     if(document.getElementbyId('switch').checked)
     {
 	 $(‘#login’).attr(‘action’, “studentHome.html”);
-	 //checkforstudent();
+	 checkforstudent();
     }
     else
     {
 	$(‘#login’).attr(‘action’, “teacherHome.html”);
-	//checkforstudent();
+	checkforstudent();
     }
 }	
 
