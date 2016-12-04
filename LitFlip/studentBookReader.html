@@ -23,7 +23,7 @@
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
-            var book = 1;
+            var book = passedbook;
             var Book = ePub("<?php echo $_GET["passedbook"] ?>", {
               width: 540,
               height: 650,
@@ -32,7 +32,7 @@
                 
             //Used to render the book onto the page
             Book.renderTo("area");
-            alert("The variable Book has value:  " + Book);
+            alert("The variable Book has value:  " + book);
             window.alert(5 + 6);
         </script>
       
