@@ -26,7 +26,7 @@
             var url = window.location.href;
             var book = str.substr(str.indexOf("passedbook=")+1);
             
-            var Book = ePub("<?php echo $_GET["passedbook"] ?>", {
+            var Book = ePub("" + book, {
               width: 540,
               height: 650,
               spreads : false
