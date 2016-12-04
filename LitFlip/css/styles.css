@@ -1,0 +1,82 @@
+@charset "UTF-8";
+h1, h3, p {
+    color: rgb(221, 222, 217);
+    text-align: center;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#prev, #next {
+    padding-top: 300px; 
+    text-align: center;
+}
+
+.glyphicon {
+    color: rgb(2, 110, 132);
+    font-size: 6.0vw;
+}
+
+.glyphicon:hover {
+    color: rgb(144, 146, 150);
+}
+
+#main {
+    height: 100%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+nav {
+    color: rgb(255, 255, 255);
+}
+
+form {
+    background-color: rgb(255, 255, 255);
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(144, 146, 150);
+    color: rgb(255, 255, 255);
+}
+
+.reader {
+    /*height: 500px;*/
+    text-align: center;
+    vertical-align: middle;
+    min-height: 100px;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.navbar-custom {
+    background-color: rgb(144, 146, 150);
+    border-color: rgb(144, 146, 150);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: rgb(2, 110, 132);
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-header > a {
+    color: rgb(255, 255, 255);
+}    
+
+.form-title {
+    text-align: center;
+    color: rgb(2, 110, 132);
+}
+
+.form-group {
+    text-align: center;
+    color: rgb(2, 110, 132);
+}
