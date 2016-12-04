@@ -19,24 +19,26 @@
 
         <!-- Application Personalized CSS -->
         <link href="./css/styles.css" rel="stylesheet" type="text/css">
-
+     
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
-            var Book = ePub("./reader/TheLadyOrTheTiger.epub", {
+            var book = 1;
+            var Book = ePub("<?php echo $_GET["passedbook"] ?>", {
               width: 540,
               height: 650,
               spreads : false
             });
-
+                
             //Used to render the book onto the page
             Book.renderTo("area");
-
+            alert("The variable Book has value:  " + Book);
+            window.alert(5 + 6);
         </script>
-
+      
     </head>
     <body>
-
+        
         <!-- Navigation bar at the top of the web page -->
         <nav class="navbar navbar-inverse navbar-custom">
             <div class="container-fluid">
@@ -84,7 +86,7 @@
 
         <br> <br>
 
-        <footer>Copyright &copy; FlypPage 2016</footer>
+        <footer>Copyright &copy; FlypPage 2016 </footer>
 
     </body>
 </html>
