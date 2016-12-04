@@ -23,7 +23,9 @@
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
-            var book = passedbook;
+            var url = window.location.href;
+            var book = str.substr(str.indexOf("passedbook=")+1);
+            
             var Book = ePub("<?php echo $_GET["passedbook"] ?>", {
               width: 540,
               height: 650,
