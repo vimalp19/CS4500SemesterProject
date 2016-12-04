@@ -23,15 +23,15 @@
         <!-- Script to obtain the book that should be displayed in the page -->
         <script>
             "use strict";
-            var Book = ePub("./reader/AliceInWonderland.epub", {
+            var Book = ePub("<?php echo $_GET["name"] ?>", {
               width: 540,
               height: 650,
               spreads : false
             });
-
+                
             //Used to render the book onto the page
             Book.renderTo("area");
-
+             alert("The variable Book has value:  " + Book);    
         </script>
 
     </head>
