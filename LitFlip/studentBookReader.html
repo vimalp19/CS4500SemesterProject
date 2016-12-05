@@ -24,12 +24,15 @@
         <script> 
             alert("hey");
             alert(window.location.href);
+            var url = window.location.href;
+            var book = url.split("passedbook=").pop();
+            alert(book);
         </script>
         <script>
             "use strict";
-            var url = window.location.href;
-            var book = str.substr(str.indexOf("passedbook=")+1);
-            var Book = ePub("" + book, {
+    //        var url = window.location.href;
+    //        var book = str.substr(str.indexOf("passedbook=")+1);
+            var Book = ePub("", {
              width: 540,
               height: 650,
               spreads : false
