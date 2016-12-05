@@ -23,9 +23,8 @@
         <!-- Script to obtain the book that should be displayed in the page -->
         <script> 
             var url = window.location.href;
-            var book = url.split("passedbook=").pop();
-            alert(book);
-            var Book = ePub(book, {
+            var passedbook = url.split("passedbook=").pop();
+            var Book = ePub(passedbook, {
              width: 540,
               height: 650,
               spreads : false
