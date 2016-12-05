@@ -17,7 +17,7 @@
             <nav class="navbar navbar-inverse navbar-custom" role="navigation">
               <div class="container-fluid">
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="#">FlypPag</a>
+                  <a class="navbar-brand" href="#">FlypPage</a>
                 </div>
               </div><!-- /.container-fluid -->
             </nav>
@@ -58,7 +58,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <input href="teacherHome.html" type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in" >
+                                                 <input onclick="javascript:register()" type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in" >
                                             </div>
                                             <div>
                                                 <br>
@@ -84,6 +84,11 @@
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/flypaperjavascript.js"></script>
-
+        <script>
+             function register() {
+                  this.action = 'teacherHome.html';
+                  return true;
+}
+        </script>
     </body>
 </html>
