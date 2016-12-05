@@ -27,19 +27,25 @@
             var url = window.location.href;
             var book = url.split("passedbook=").pop();
             alert(book);
+            var Book = ePub(book, {
+             width: 540,
+              height: 650,
+              spreads : false
+            });
+            Book.renderTo("area")
         </script>
         <script>
             "use strict";
     //        var url = window.location.href;
     //        var book = str.substr(str.indexOf("passedbook=")+1);
-            var Book = ePub("", {
-             width: 540,
-              height: 650,
-              spreads : false
-            });
+   //         var Book = ePub("", {
+   //          width: 540,
+   //           height: 650,
+   //           spreads : false
+    //        });
                 
             //Used to render the book onto the page
-            Book.renderTo("area");
+    //        Book.renderTo("area");
         </script>
       
     </head>
