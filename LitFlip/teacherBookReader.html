@@ -28,12 +28,22 @@
 
         <!-- Script to obtain the book that will be displayed onto this page -->
         <script>
-            "use strict";
-            var Book = ePub("./reader/AliceInWonderland.epub", {
-              width: 540,
+            var url = window.location.href;
+            var passedbook = url.split("passedbook=").pop();
+            var Book = ePub(passedbook, {
+             width: 540,
               height: 650,
               spreads : false
             });
+ //           Book.renderTo("area")
+        </script>
+        <script>
+            "use strict";
+//            var Book = ePub("./reader/AliceInWonderland.epub", {
+//              width: 540,
+ //             height: 650,
+ //             spreads : false
+ //           });
         </script>
 
     </head>
